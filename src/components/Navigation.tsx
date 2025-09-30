@@ -73,7 +73,7 @@ const Navigation = () => {
                   </Link>
                 )
               )}
-              <img src={funectLogo} alt="Funect" className="h-12 w-12 object-contain" />
+              <img src={funectLogo} alt="Funect" className="h-16 w-16 object-contain" />
             </div>
 
             {/* Mobile Menu Button */}
@@ -132,7 +132,7 @@ const Navigation = () => {
                   </Link>
                 )
               )}
-              <img src={funectLogo} alt="Funect" className="h-16 w-16 object-contain mt-4" />
+              <img src={funectLogo} alt="Funect" className="h-20 w-20 object-contain mt-4" />
             </div>
           </div>
         </div>
