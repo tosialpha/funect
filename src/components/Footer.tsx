@@ -30,13 +30,13 @@ const Footer = () => {
             <h4 className="font-semibold mb-4">Product</h4>
             <ul className="space-y-2">
               <li>
-                <a href="#features" className="text-muted-foreground hover:text-primary transition-colors">
-                  Features
+                <a href="#faq" className="text-muted-foreground hover:text-primary transition-colors">
+                  FAQ
                 </a>
               </li>
               <li>
                 <a href="#pricing" className="text-muted-foreground hover:text-primary transition-colors">
-                  Pricing
+                  Club/Enterprise
                 </a>
               </li>
               <li>
