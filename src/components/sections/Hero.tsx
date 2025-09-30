@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Button } from "../ui/button";
 import heroMockup from "../../assets/hero-mockup-new.png";
+import heroMockup2 from "../../assets/hero-mockup-2.png";
 
 const Hero = () => {
   return (
@@ -26,12 +27,18 @@ const Hero = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="mt-16"
+          className="mt-16 flex flex-col md:flex-row gap-8 justify-center items-center"
         >
           <img
             src={heroMockup}
-            alt="Funect App Interface"
-            className="max-w-2xl mx-auto rounded-2xl shadow-2xl h-auto"
+            alt="Funect App Interface - Home"
+            className="max-w-md mx-auto rounded-2xl shadow-2xl h-auto"
+            style={{ imageRendering: '-webkit-optimize-contrast' }}
+          />
+          <img
+            src={heroMockup2}
+            alt="Funect App Interface - Events"
+            className="max-w-md mx-auto rounded-2xl shadow-2xl h-auto"
             style={{ imageRendering: '-webkit-optimize-contrast' }}
           />
         </motion.div>
