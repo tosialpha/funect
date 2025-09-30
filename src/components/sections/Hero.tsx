@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Button } from "../ui/button";
-import Spline from "@splinetool/react-spline";
+import heroMockup from "../../assets/hero-mockup-new.png";
+import heroMockup2 from "../../assets/hero-mockup-2.png";
 
 const Hero = () => {
   return (
@@ -26,14 +27,20 @@ const Hero = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="mt-16 w-full max-w-6xl mx-auto"
+          className="mt-16 flex flex-col md:flex-row gap-8 justify-center items-center"
         >
-          <div className="w-full h-[500px] md:h-[700px] relative">
-            <Spline 
-              scene="https://prod.spline.design/bMz04PEgc1nHtuxwCn7oPGpI/scene.splinecode"
-              style={{ width: '100%', height: '100%' }}
-            />
-          </div>
+          <img
+            src={heroMockup}
+            alt="Funect App Interface - Home"
+            className="max-w-md mx-auto rounded-2xl shadow-2xl h-auto"
+            style={{ imageRendering: '-webkit-optimize-contrast' }}
+          />
+          <img
+            src={heroMockup2}
+            alt="Funect App Interface - Events"
+            className="max-w-md mx-auto rounded-2xl shadow-2xl h-auto"
+            style={{ imageRendering: '-webkit-optimize-contrast' }}
+          />
         </motion.div>
       </div>
     </section>
