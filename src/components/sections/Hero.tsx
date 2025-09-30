@@ -26,7 +26,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="mt-16 w-full max-w-4xl mx-auto h-[500px] md:h-[700px]"
+          className="mt-16 w-full max-w-4xl mx-auto h-[500px] md:h-[700px] [&_canvas]:!bg-transparent [&_canvas]:mix-blend-lighten"
         >
           <Spline 
             scene="https://prod.spline.design/K0UkJoRYVt9VXwCF/scene.splinecode"
