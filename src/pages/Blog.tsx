@@ -4,40 +4,43 @@ import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { CalendarBlank, Clock } from "@phosphor-icons/react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Blog = () => {
+  const { t } = useLanguage();
+  
   const articles = [
     {
       id: 1,
-      title: "5 Ways to Find Your Perfect Sports Community",
-      excerpt: "Discover how Funect helps you connect with like-minded athletes and build lasting friendships through sports.",
+      title: t('blog.article1.title'),
+      excerpt: t('blog.article1.excerpt'),
       date: "September 15, 2025",
-      readTime: "5 min read",
-      category: "Community",
+      readTime: `5 ${t('blog.minRead')}`,
+      category: t('blog.article1.category'),
     },
     {
       id: 2,
-      title: "The Rise of Padel: Why Everyone's Talking About It",
-      excerpt: "Explore the fastest-growing sport in the world and why it's perfect for building social connections.",
+      title: t('blog.article2.title'),
+      excerpt: t('blog.article2.excerpt'),
       date: "September 8, 2025",
-      readTime: "7 min read",
-      category: "Sports",
+      readTime: `7 ${t('blog.minRead')}`,
+      category: t('blog.article2.category'),
     },
     {
       id: 3,
-      title: "How to Organize the Perfect Pickup Game",
-      excerpt: "Tips and tricks for creating engaging, well-organized games that keep players coming back.",
+      title: t('blog.article3.title'),
+      excerpt: t('blog.article3.excerpt'),
       date: "August 28, 2025",
-      readTime: "6 min read",
-      category: "Tips",
+      readTime: `6 ${t('blog.minRead')}`,
+      category: t('blog.article3.category'),
     },
     {
       id: 4,
-      title: "Venue Spotlight: The Best Courts in Your City",
-      excerpt: "A comprehensive guide to finding and booking the best sports venues in your area.",
+      title: t('blog.article4.title'),
+      excerpt: t('blog.article4.excerpt'),
       date: "August 20, 2025",
-      readTime: "8 min read",
-      category: "Venues",
+      readTime: `8 ${t('blog.minRead')}`,
+      category: t('blog.article4.category'),
     },
   ];
 
@@ -54,10 +57,10 @@ const Blog = () => {
             className="text-center mb-16"
           >
             <h1 className="text-5xl md:text-6xl font-bold mb-6 text-gradient">
-              Funect Articles
+              {t('blog.title')}
             </h1>
             <p className="text-xl md:text-2xl">
-              Stories, tips, and insights from the sports community
+              {t('blog.subtitle')}
             </p>
           </motion.div>
 
