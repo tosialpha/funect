@@ -1,7 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
-import { Target, Heart, Lightbulb } from "@phosphor-icons/react";
+import { Target, Heart, Lightbulb, Buildings } from "@phosphor-icons/react";
 import { Card } from "@/components/ui/card";
 
 const About = () => {
@@ -20,6 +20,11 @@ const About = () => {
       icon: Lightbulb,
       title: "Our Innovation",
       description: "We're constantly evolving with new features to make sports more accessible and social.",
+    },
+    {
+      icon: Buildings,
+      title: "Our Commitment to Venues",
+      description: "Empowering sports facilities and organizations with tools to thrive, reach more athletes, and build stronger communities.",
     },
   ];
 
