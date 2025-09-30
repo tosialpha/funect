@@ -96,11 +96,22 @@ const translations = {
     
     // Contact
     'contact.title': 'Get in Touch',
-    'contact.subtitle': 'Have a question or want to learn more? We\'d love to hear from you.',
+    'contact.subtitle': 'Have questions? We\'d love to hear from you.',
+    'contact.formTitle': 'Send us a message',
     'contact.name': 'Name',
+    'contact.namePlaceholder': 'Your name',
     'contact.email': 'Email',
+    'contact.emailPlaceholder': 'your@email.com',
+    'contact.subject': 'Subject',
+    'contact.subjectPlaceholder': 'How can we help?',
     'contact.message': 'Message',
+    'contact.messagePlaceholder': 'Tell us more...',
     'contact.send': 'Send Message',
+    'contact.emailLabel': 'Email',
+    'contact.phoneLabel': 'Phone',
+    'contact.phoneHours': 'Mon-Fri 9am-6pm EST',
+    'contact.officeLabel': 'Office',
+    'contact.officeAddress': '123 Sports Avenue\nSan Francisco, CA 94102\nUnited States',
   },
   fi: {
     // Navigation
@@ -189,11 +200,22 @@ const translations = {
     
     // Contact
     'contact.title': 'Ota Yhteyttä',
-    'contact.subtitle': 'Onko sinulla kysymys tai haluatko oppia lisää? Haluamme kuulla sinusta.',
+    'contact.subtitle': 'Onko sinulla kysyttävää? Haluaisimme kuulla sinusta.',
+    'contact.formTitle': 'Lähetä viesti',
     'contact.name': 'Nimi',
+    'contact.namePlaceholder': 'Nimesi',
     'contact.email': 'Sähköposti',
+    'contact.emailPlaceholder': 'sähköpostisi@esimerkki.com',
+    'contact.subject': 'Aihe',
+    'contact.subjectPlaceholder': 'Miten voimme auttaa?',
     'contact.message': 'Viesti',
-    'contact.send': 'Lähetä Viesti',
+    'contact.messagePlaceholder': 'Kerro lisää…',
+    'contact.send': 'Lähetä viesti',
+    'contact.emailLabel': 'Sähköposti',
+    'contact.phoneLabel': 'Puhelin',
+    'contact.phoneHours': 'ma–pe klo 9–18 (EST)',
+    'contact.officeLabel': 'Toimisto',
+    'contact.officeAddress': '123 Sports Avenue\nSan Francisco, CA 94102\nYhdysvallat',
   },
 };
 

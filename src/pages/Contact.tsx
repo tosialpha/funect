@@ -7,8 +7,11 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { EnvelopeSimple, MapPin, Phone } from "@phosphor-icons/react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Contact = () => {
+  const { t } = useLanguage();
+  
   return (
     <div className="min-h-screen">
       <Navigation />
@@ -22,10 +25,10 @@ const Contact = () => {
             className="text-center mb-16"
           >
             <h1 className="text-5xl md:text-6xl font-bold mb-6 text-gradient">
-              Get In Touch
+              {t('contact.title')}
             </h1>
             <p className="text-xl md:text-2xl">
-              Have questions? We'd love to hear from you.
+              {t('contact.subtitle')}
             </p>
           </motion.div>
 
@@ -36,30 +39,30 @@ const Contact = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <Card className="glass p-8">
-                <h2 className="text-2xl font-semibold mb-6">Send us a message</h2>
+                <h2 className="text-2xl font-semibold mb-6">{t('contact.formTitle')}</h2>
                 <form className="space-y-6">
                   <div>
-                    <Label htmlFor="name">Name</Label>
-                    <Input id="name" placeholder="Your name" className="mt-2" />
+                    <Label htmlFor="name">{t('contact.name')}</Label>
+                    <Input id="name" placeholder={t('contact.namePlaceholder')} className="mt-2" />
                   </div>
                   <div>
-                    <Label htmlFor="email">Email</Label>
-                    <Input id="email" type="email" placeholder="your@email.com" className="mt-2" />
+                    <Label htmlFor="email">{t('contact.email')}</Label>
+                    <Input id="email" type="email" placeholder={t('contact.emailPlaceholder')} className="mt-2" />
                   </div>
                   <div>
-                    <Label htmlFor="subject">Subject</Label>
-                    <Input id="subject" placeholder="How can we help?" className="mt-2" />
+                    <Label htmlFor="subject">{t('contact.subject')}</Label>
+                    <Input id="subject" placeholder={t('contact.subjectPlaceholder')} className="mt-2" />
                   </div>
                   <div>
-                    <Label htmlFor="message">Message</Label>
+                    <Label htmlFor="message">{t('contact.message')}</Label>
                     <Textarea 
                       id="message" 
-                      placeholder="Tell us more..." 
+                      placeholder={t('contact.messagePlaceholder')} 
                       className="mt-2 min-h-[150px]" 
                     />
                   </div>
                   <Button className="w-full neumorphic glow-hover">
-                    Send Message
+                    {t('contact.send')}
                   </Button>
                 </form>
               </Card>
@@ -77,7 +80,7 @@ const Contact = () => {
                     <EnvelopeSimple size={24} weight="light" className="text-primary" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold mb-2">Email</h3>
+                    <h3 className="text-xl font-semibold mb-2">{t('contact.emailLabel')}</h3>
                     <p className="text-muted-foreground">hello@funect.com</p>
                     <p className="text-muted-foreground">support@funect.com</p>
                   </div>
@@ -90,9 +93,9 @@ const Contact = () => {
                     <Phone size={24} weight="light" className="text-primary" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold mb-2">Phone</h3>
+                    <h3 className="text-xl font-semibold mb-2">{t('contact.phoneLabel')}</h3>
                     <p className="text-muted-foreground">+1 (555) 123-4567</p>
-                    <p className="text-sm text-muted-foreground mt-1">Mon-Fri 9am-6pm EST</p>
+                    <p className="text-sm text-muted-foreground mt-1">{t('contact.phoneHours')}</p>
                   </div>
                 </div>
               </Card>
@@ -103,11 +106,9 @@ const Contact = () => {
                     <MapPin size={24} weight="light" className="text-primary" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold mb-2">Office</h3>
-                    <p className="text-muted-foreground">
-                      123 Sports Avenue<br />
-                      San Francisco, CA 94102<br />
-                      United States
+                    <h3 className="text-xl font-semibold mb-2">{t('contact.officeLabel')}</h3>
+                    <p className="text-muted-foreground" style={{ whiteSpace: 'pre-line' }}>
+                      {t('contact.officeAddress')}
                     </p>
                   </div>
                 </div>
