@@ -27,7 +27,7 @@ const FAQ = () => {
     },
     {
       question: "How does player matching work?",
-      answer: "Our smart matching algorithm considers your skill level, location, preferred sports, and playing schedule to suggest compatible players. Pro users get access to our advanced matching system with even more precise recommendations.",
+      answer: "Our smart matching algorithm considers your skill level, location, preferred sports, and playing schedule to suggest compatible players.",
     },
     {
       question: "Can venues join Funect?",
