@@ -27,15 +27,15 @@ const Navigation = () => {
 
   const navLinks = isHomePage ? [
     { label: "How It Works", id: "how-it-works" },
-    { label: "FAQ", id: "faq" },
     { label: "About", to: "/about" },
     { label: "Articles", to: "/blog" },
+    { label: "FAQ", id: "faq" },
     { label: "Contact", to: "/contact" },
   ] : [
     { label: "How It Works", to: "/#how-it-works" },
-    { label: "FAQ", to: "/#faq" },
     { label: "About", to: "/about" },
     { label: "Articles", to: "/blog" },
+    { label: "FAQ", to: "/#faq" },
     { label: "Contact", to: "/contact" },
   ];
 
