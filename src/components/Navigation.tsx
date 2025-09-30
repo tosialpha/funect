@@ -56,7 +56,7 @@ const Navigation = () => {
             </Link>
 
             {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center gap-8">
+            <div className="hidden md:flex items-center gap-8 absolute left-1/2 transform -translate-x-1/2">
               {navLinks.map((link) =>
                 "id" in link ? (
                   <button
@@ -76,6 +76,9 @@ const Navigation = () => {
                   </Link>
                 )
               )}
+            </div>
+            
+            <div className="hidden md:block">
               <button
                 onClick={() => setLanguage(language === 'en' ? 'fi' : 'en')}
                 className="flex items-center gap-2 px-3 py-2 rounded-lg border-2 border-primary/20 hover:border-primary hover:bg-primary/10 transition-colors"
