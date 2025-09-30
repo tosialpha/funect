@@ -104,7 +104,7 @@ const translations = {
   },
   fi: {
     // Navigation
-    'nav.howItWorks': 'Miten Se Toimii',
+    'nav.howItWorks': 'Miten Funect toimii',
     'nav.faq': 'UKK',
     'nav.about': 'Tietoa Meistä',
     'nav.articles': 'Artikkelit',
@@ -114,7 +114,7 @@ const translations = {
     'hero.title': 'Yhdessä liikunnan kautta',
     'hero.subtitle': 'Löydä paikat, liity lobbyihin ja tapaa uusia pelikavereita. Funect tekee aktiivisena pysymisestä helpompaa kuin koskaan.',
     'hero.cta': 'Liity Funectiin!',
-    'hero.howItWorks': 'Miten se toimii',
+    'hero.howItWorks': 'Miten Funect toimii',
     'hero.howItWorksSubtitle': 'Aloittaminen on helppoa:',
     'hero.step1.title': 'Löydä paikka',
     'hero.step1.desc': 'Selaa ja löydä urheilupaikkoja läheltäsi reaaliaikaisella saatavuudella.',
