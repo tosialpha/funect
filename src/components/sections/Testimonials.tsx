@@ -10,25 +10,25 @@ const Testimonials = () => {
 
   const testimonials = [
     {
-      name: "Sarah Johnson",
+      name: "Veeti Karppinen",
       sport: "Padel",
       quote: "I've met 3 new padel partners through Funect! It's so easy to find people at my skill level.",
       outcome: "Met 3 new padel partners",
     },
     {
-      name: "Marcus Lee",
+      name: "Yassin Daoussi",
       sport: "Basketball",
       quote: "Finally, a way to organize pickup games without endless group chats. Love the lobby system!",
       outcome: "Organized 15+ games",
     },
     {
-      name: "Emma Rodriguez",
+      name: "Alexandr Malmberg",
       sport: "Tennis",
       quote: "Discovered 5 amazing courts near me I didn't even know existed. Game changer!",
       outcome: "Discovered 5 new venues",
     },
     {
-      name: "James Chen",
+      name: "Veeti Eerola",
       sport: "Soccer",
       quote: "The community tournaments are incredible. Met so many awesome people through Funect.",
       outcome: "Joined 8 tournaments",
