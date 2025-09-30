@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { InstagramLogo, TwitterLogo, LinkedinLogo } from "@phosphor-icons/react";
+import { InstagramLogo, TiktokLogo, LinkedinLogo } from "@phosphor-icons/react";
 import appStoreBadge from "../assets/app-store-badge.png";
 import googlePlayBadge from "../assets/google-play-badge.png";
 
@@ -18,7 +18,7 @@ const Footer = () => {
                 <InstagramLogo size={24} weight="light" />
               </a>
               <a href="#" className="hover:text-primary transition-colors">
-                <TwitterLogo size={24} weight="light" />
+                <TiktokLogo size={24} weight="light" />
               </a>
               <a href="#" className="hover:text-primary transition-colors">
                 <LinkedinLogo size={24} weight="light" />
