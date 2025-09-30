@@ -28,12 +28,14 @@ const Navigation = () => {
 
   const navLinks = isHomePage ? [
     { label: t('nav.howItWorks'), id: "how-it-works" },
+    { label: t('nav.forVenues'), id: "pricing" },
     { label: t('nav.about'), to: "/about" },
     { label: t('nav.articles'), to: "/blog" },
     { label: t('nav.faq'), id: "faq" },
     { label: t('nav.contact'), to: "/contact" },
   ] : [
     { label: t('nav.howItWorks'), to: "/#how-it-works" },
+    { label: t('nav.forVenues'), to: "/#pricing" },
     { label: t('nav.about'), to: "/about" },
     { label: t('nav.articles'), to: "/blog" },
     { label: t('nav.faq'), to: "/#faq" },

@@ -15,6 +15,7 @@ const translations = {
     // Navigation
     'nav.howItWorks': 'How It Works',
     'nav.faq': 'FAQ',
+    'nav.forVenues': 'For Venues',
     'nav.about': 'About Us',
     'nav.articles': 'Articles',
     'nav.contact': 'Contact',
@@ -236,6 +237,7 @@ const translations = {
     // Navigation
     'nav.howItWorks': 'Miten Funect toimii',
     'nav.faq': 'UKK',
+    'nav.forVenues': 'Yrityksille',
     'nav.about': 'Tietoa Meistä',
     'nav.articles': 'Artikkelit',
     'nav.contact': 'Yhteystiedot',
