@@ -121,7 +121,7 @@ const translations = {
     'hero.step2.title': 'Liity tai luo lobby',
     'hero.step2.desc': 'Yhdistä pelaajiin, joilla on sama taitotaso, ja järjestä otteluita vaivattomasti.',
     'hero.step3.title': 'Pelaa yhdessä',
-    'hero.step3.desc': 'Tapaa uusia ihmisiä, pysy aktiivisena ja luo pysyviä urheiluystäviä.',
+    'hero.step3.desc': 'Tapaa uusia ihmisiä, pysy aktiivisena ja luo pysyviä ystävyyssuhteita liikunnan kautta.',
     
     // Testimonials
     'testimonials.title': 'Mitä yhteisömme sanoo',
