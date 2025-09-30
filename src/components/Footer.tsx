@@ -1,0 +1,104 @@
+import { Link } from "react-router-dom";
+import { InstagramLogo, TwitterLogo, LinkedinLogo, AppleLogo, GooglePlayLogo } from "@phosphor-icons/react";
+
+const Footer = () => {
+  return (
+    <footer className="bg-muted py-16">
+      <div className="container mx-auto px-4">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+          <div>
+            <h3 className="text-2xl font-semibold mb-4 text-gradient">Funect</h3>
+            <p className="text-muted-foreground mb-4">
+              Connect through sports. Discover venues. Stay active together.
+            </p>
+            <div className="flex gap-4">
+              <a href="#" className="hover:text-primary transition-colors">
+                <InstagramLogo size={24} weight="light" />
+              </a>
+              <a href="#" className="hover:text-primary transition-colors">
+                <TwitterLogo size={24} weight="light" />
+              </a>
+              <a href="#" className="hover:text-primary transition-colors">
+                <LinkedinLogo size={24} weight="light" />
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <h4 className="font-semibold mb-4">Product</h4>
+            <ul className="space-y-2">
+              <li>
+                <a href="#features" className="text-muted-foreground hover:text-primary transition-colors">
+                  Features
+                </a>
+              </li>
+              <li>
+                <a href="#pricing" className="text-muted-foreground hover:text-primary transition-colors">
+                  Pricing
+                </a>
+              </li>
+              <li>
+                <a href="#how-it-works" className="text-muted-foreground hover:text-primary transition-colors">
+                  How It Works
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="font-semibold mb-4">Company</h4>
+            <ul className="space-y-2">
+              <li>
+                <Link to="/about" className="text-muted-foreground hover:text-primary transition-colors">
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link to="/blog" className="text-muted-foreground hover:text-primary transition-colors">
+                  Blog
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" className="text-muted-foreground hover:text-primary transition-colors">
+                  Contact
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="font-semibold mb-4">Download App</h4>
+            <div className="flex flex-col gap-3">
+              <a
+                href="#"
+                className="flex items-center gap-2 px-4 py-2 bg-foreground text-background rounded-lg hover:opacity-80 transition-opacity"
+              >
+                <AppleLogo size={24} weight="fill" />
+                <div>
+                  <p className="text-xs">Download on the</p>
+                  <p className="text-sm font-semibold">App Store</p>
+                </div>
+              </a>
+              <a
+                href="#"
+                className="flex items-center gap-2 px-4 py-2 bg-foreground text-background rounded-lg hover:opacity-80 transition-opacity"
+              >
+                <GooglePlayLogo size={24} weight="fill" />
+                <div>
+                  <p className="text-xs">Get it on</p>
+                  <p className="text-sm font-semibold">Google Play</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div className="border-t border-border pt-8 text-center text-muted-foreground">
+          <p>&copy; 2024 Funect. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
