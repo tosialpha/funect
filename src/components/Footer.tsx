@@ -74,7 +74,7 @@ const Footer = () => {
                 <img 
                   src={appStoreBadges} 
                   alt="Available on App Store and Google Play" 
-                  className="w-full max-w-[200px]"
+                  className="w-full max-w-[200px] -ml-2"
                 />
               </a>
             </div>
