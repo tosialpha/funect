@@ -54,7 +54,7 @@ const Blog = () => {
             className="text-center mb-16"
           >
             <h1 className="text-5xl md:text-6xl font-bold mb-6 text-gradient">
-              Funect Blog
+              Funect Articles
             </h1>
             <p className="text-xl md:text-2xl">
               Stories, tips, and insights from the sports community

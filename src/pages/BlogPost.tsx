@@ -143,7 +143,7 @@ const BlogPost = () => {
             <Link to="/blog">
               <Button variant="ghost" className="mb-8">
                 <ArrowLeft size={20} weight="light" className="mr-2" />
-                Back to Blog
+                Back to Articles
               </Button>
             </Link>
 

@@ -29,13 +29,13 @@ const Navigation = () => {
     { label: "How It Works", id: "how-it-works" },
     { label: "FAQ", id: "faq" },
     { label: "About", to: "/about" },
-    { label: "Blog", to: "/blog" },
+    { label: "Articles", to: "/blog" },
     { label: "Contact", to: "/contact" },
   ] : [
     { label: "Home", to: "/" },
     { label: "FAQ", to: "/#faq" },
     { label: "About", to: "/about" },
-    { label: "Blog", to: "/blog" },
+    { label: "Articles", to: "/blog" },
     { label: "Contact", to: "/contact" },
   ];
 
