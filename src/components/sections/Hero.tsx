@@ -31,7 +31,8 @@ const Hero = () => {
           <img
             src={heroMockup}
             alt="Funect App Interface"
-            className="max-w-4xl w-full mx-auto rounded-2xl shadow-2xl"
+            className="max-w-2xl mx-auto rounded-2xl shadow-2xl h-auto"
+            style={{ imageRendering: '-webkit-optimize-contrast' }}
           />
         </motion.div>
       </div>
