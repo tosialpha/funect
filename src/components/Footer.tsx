@@ -92,7 +92,16 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-border pt-8 text-center text-muted-foreground">
-          <p>&copy; 2024 Funect. All rights reserved.</p>
+          <div className="flex flex-col md:flex-row justify-center items-center gap-4 mb-4">
+            <Link to="/terms" className="hover:text-primary transition-colors">
+              Terms of Service
+            </Link>
+            <span className="hidden md:inline">•</span>
+            <Link to="/privacy" className="hover:text-primary transition-colors">
+              Privacy Policy
+            </Link>
+          </div>
+          <p>&copy; 2025 Funect. All rights reserved.</p>
         </div>
       </div>
     </footer>
