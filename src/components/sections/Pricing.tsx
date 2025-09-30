@@ -31,7 +31,7 @@ const Pricing = () => {
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4">Club/Enterprise Solutions</h2>
           <p className="text-xl text-muted-foreground">
-            Powerful tools for venues and organizations
+            Custom solutions tailored to your organization's needs
           </p>
         </motion.div>
 
@@ -43,10 +43,6 @@ const Pricing = () => {
         >
           <Card className="glass p-12">
             <div className="text-center mb-8">
-              <h3 className="text-3xl font-bold mb-4">Club/Enterprise</h3>
-              <p className="text-muted-foreground mb-6">
-                Custom solutions tailored to your organization's needs
-              </p>
               <div className="mb-8">
                 <span className="text-5xl font-bold">Custom Pricing</span>
               </div>
