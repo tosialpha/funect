@@ -1,7 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
-import { Target, Heart, Users, Lightbulb } from "@phosphor-icons/react";
+import { Target, Heart, Lightbulb } from "@phosphor-icons/react";
 import { Card } from "@/components/ui/card";
 
 const About = () => {
@@ -15,11 +15,6 @@ const About = () => {
       icon: Heart,
       title: "Our Values",
       description: "Community, inclusivity, and passion for sports drive everything we do at Funect.",
-    },
-    {
-      icon: Users,
-      title: "Our Community",
-      description: "Over 50,000 active players have found their sports community through Funect.",
     },
     {
       icon: Lightbulb,
@@ -55,12 +50,12 @@ const About = () => {
             className="mb-16"
           >
             <p className="text-lg leading-relaxed mb-6">
-              Founded in 2022, Funect started with a simple observation: finding people to play sports with 
+              Founded in 2025, Funect started with a simple observation: finding people to play sports with 
               and discovering great venues was unnecessarily difficult. We set out to change that.
             </p>
             <p className="text-lg leading-relaxed mb-6">
-              Today, Funect connects thousands of athletes, from casual players to competitive competitors, 
-              making it easier than ever to stay active and build meaningful connections through sports.
+              We're building a platform to connect athletes of all levels, from casual players to competitive 
+              competitors, making it easier to stay active and build meaningful connections through sports.
             </p>
             <p className="text-lg leading-relaxed">
               Whether you're looking for a pickup basketball game, a tennis partner, or a padel tournament, 
