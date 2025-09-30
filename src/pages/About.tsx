@@ -3,28 +3,31 @@ import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 import { Target, Heart, Lightbulb, Buildings } from "@phosphor-icons/react";
 import { Card } from "@/components/ui/card";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const About = () => {
+  const { t } = useLanguage();
+  
   const values = [
     {
       icon: Target,
-      title: "Our Vision",
-      description: "To create a world where staying active and connecting with others through sports is effortless for everyone.",
+      title: t('about.vision'),
+      description: t('about.visionDesc'),
     },
     {
       icon: Heart,
-      title: "Our Values",
-      description: "Community, inclusivity, and passion for sports drive everything we do at Funect.",
+      title: t('about.values'),
+      description: t('about.valuesDesc'),
     },
     {
       icon: Lightbulb,
-      title: "Our Innovation",
-      description: "We're constantly evolving with new features to make sports more accessible and social.",
+      title: t('about.innovation'),
+      description: t('about.innovationDesc'),
     },
     {
       icon: Buildings,
-      title: "Our Commitment to Venues",
-      description: "Empowering sports facilities and organizations with tools to thrive, reach more athletes, and build stronger communities.",
+      title: t('about.venues'),
+      description: t('about.venuesDesc'),
     },
   ];
 
@@ -41,10 +44,10 @@ const About = () => {
             className="text-center mb-16"
           >
             <h1 className="text-5xl md:text-6xl font-bold mb-6 text-gradient">
-              About Funect
+              {t('about.title')}
             </h1>
             <p className="text-xl md:text-2xl leading-relaxed">
-              We're on a mission to make sports more social, accessible, and fun for everyone.
+              {t('about.subtitle')}
             </p>
           </motion.div>
 
@@ -55,16 +58,13 @@ const About = () => {
             className="mb-16"
           >
             <p className="text-lg leading-relaxed mb-6">
-              Founded in 2025, Funect started with a simple observation: finding people to play sports with 
-              and discovering great venues was unnecessarily difficult. We set out to change that.
+              {t('about.p1')}
             </p>
             <p className="text-lg leading-relaxed mb-6">
-              We're building a platform to connect athletes of all levels, from casual players to competitive 
-              competitors, making it easier to stay active and build meaningful connections through sports.
+              {t('about.p2')}
             </p>
             <p className="text-lg leading-relaxed">
-              Whether you're looking for a pickup basketball game, a tennis partner, or a padel tournament, 
-              Funect brings the sports community together in one intuitive platform.
+              {t('about.p3')}
             </p>
           </motion.div>
 
