@@ -33,10 +33,6 @@ const FAQ = () => {
       question: "Can venues join Funect?",
       answer: "Absolutely! We offer a Club/Enterprise plan specifically for venues and sports organizations. This includes management tools, analytics, custom branding, and more. Contact our sales team for a custom quote.",
     },
-    {
-      question: "How do I cancel my subscription?",
-      answer: "You can cancel your subscription anytime from your account settings. Your Pro features will remain active until the end of your billing period, and you'll automatically revert to the free plan.",
-    },
   ];
 
   return (
