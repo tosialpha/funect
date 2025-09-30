@@ -44,7 +44,7 @@ const Pricing = () => {
           <Card className="border-2 border-border bg-background/95 backdrop-blur-sm p-12 shadow-xl">
             <div className="text-center mb-8">
               <div className="mb-8">
-                <span className="text-5xl font-bold text-foreground">Custom Pricing</span>
+                <span className="text-5xl font-bold text-black dark:text-white">Custom Pricing</span>
               </div>
             </div>
             
