@@ -111,7 +111,7 @@ const translations = {
     'nav.contact': 'Yhteystiedot',
     
     // Hero
-    'hero.title': 'Yhdistä liikunnan kautta',
+    'hero.title': 'Yhdessä liikunnan kautta',
     'hero.subtitle': 'Löydä paikat, liity lobbyihin ja tapaa uusia pelikavereita. Funect tekee aktiivisena pysymisestä helpompaa kuin koskaan.',
     'hero.cta': 'Liity Funectiin!',
     'hero.howItWorks': 'Miten se toimii',
@@ -120,7 +120,7 @@ const translations = {
     'hero.step1.desc': 'Selaa ja löydä urheilupaikkoja läheltäsi reaaliaikaisella saatavuudella.',
     'hero.step2.title': 'Liity tai luo lobby',
     'hero.step2.desc': 'Yhdistä pelaajiin, joilla on sama taitotaso, ja järjestä otteluita vaivattomasti.',
-    'hero.step3.title': 'Pelaa ja yhdistä',
+    'hero.step3.title': 'Pelaa yhdessä',
     'hero.step3.desc': 'Tapaa uusia ihmisiä, pysy aktiivisena ja luo pysyviä urheiluystäviä.',
     
     // Testimonials
@@ -160,7 +160,7 @@ const translations = {
     'pricing.cta': 'Ota yhteyttä myyntiin!',
     
     // Footer
-    'footer.tagline': 'Yhdistä liikunnan kautta. Löydä paikat. Pysy aktiivisena yhdessä.',
+    'footer.tagline': 'Yhdessä liikunnan kautta. Löydä paikat. Pysy aktiivisena yhdessä.',
     'footer.product': 'Tuote',
     'footer.company': 'Yritys',
     'footer.downloadApp': 'Lataa sovellus',
