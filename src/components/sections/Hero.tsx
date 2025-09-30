@@ -49,7 +49,7 @@ const Hero = () => {
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="w-full h-[600px] relative isolate"
+            className="w-full h-[600px] relative isolate -mt-8"
           >
             <div className="absolute inset-0 [&_canvas]:!bg-transparent [&>div]:!bg-transparent">
               <Spline 
