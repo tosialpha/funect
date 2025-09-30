@@ -26,11 +26,11 @@ const Navigation = () => {
   };
 
   const navLinks = isHomePage ? [
-    { label: "Features", id: "features" },
     { label: "How It Works", id: "how-it-works" },
-    { label: "Testimonials", id: "testimonials" },
-    { label: "Pricing", id: "pricing" },
     { label: "FAQ", id: "faq" },
+    { label: "About", to: "/about" },
+    { label: "Blog", to: "/blog" },
+    { label: "Contact", to: "/contact" },
   ] : [
     { label: "Home", to: "/" },
     { label: "About", to: "/about" },
@@ -54,7 +54,7 @@ const Navigation = () => {
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center gap-8">
               {navLinks.map((link) =>
-                isHomePage && "id" in link ? (
+                "id" in link ? (
                   <button
                     key={link.id}
                     onClick={() => scrollToSection(link.id)}
@@ -112,7 +112,7 @@ const Navigation = () => {
             </button>
             <div className="flex flex-col gap-6">
               {navLinks.map((link) =>
-                isHomePage && "id" in link ? (
+                "id" in link ? (
                   <button
                     key={link.id}
                     onClick={() => scrollToSection(link.id)}
