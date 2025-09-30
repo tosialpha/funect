@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { EnvelopeSimple, MapPin, Phone } from "@phosphor-icons/react";
+import { EnvelopeSimple, Phone } from "@phosphor-icons/react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const Contact = () => {
@@ -96,20 +96,6 @@ const Contact = () => {
                     <h3 className="text-xl font-semibold mb-2">{t('contact.phoneLabel')}</h3>
                     <p className="text-muted-foreground">+1 (555) 123-4567</p>
                     <p className="text-sm text-muted-foreground mt-1">{t('contact.phoneHours')}</p>
-                  </div>
-                </div>
-              </Card>
-
-              <Card className="glass p-6">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                    <MapPin size={24} weight="light" className="text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold mb-2">{t('contact.officeLabel')}</h3>
-                    <p className="text-muted-foreground" style={{ whiteSpace: 'pre-line' }}>
-                      {t('contact.officeAddress')}
-                    </p>
                   </div>
                 </div>
               </Card>
