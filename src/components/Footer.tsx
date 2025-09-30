@@ -71,20 +71,20 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4">Download App</h4>
             <div className="flex flex-col gap-4">
-              <a href="#" className="hover:opacity-90 transition-opacity">
+              <a href="#" className="hover:opacity-90 transition-opacity block">
                 <img 
                   src={appStoreBadge} 
                   alt="Download on the App Store" 
-                  className="w-full max-w-[260px]" 
-                  style={{ imageRendering: 'crisp-edges' }}
+                  className="h-auto"
+                  style={{ imageRendering: '-webkit-optimize-contrast' }}
                 />
               </a>
-              <a href="#" className="hover:opacity-90 transition-opacity">
+              <a href="#" className="hover:opacity-90 transition-opacity block">
                 <img 
                   src={googlePlayBadge} 
                   alt="Get it on Google Play" 
-                  className="w-full max-w-[260px]" 
-                  style={{ imageRendering: 'crisp-edges' }}
+                  className="h-auto" 
+                  style={{ imageRendering: '-webkit-optimize-contrast' }}
                 />
               </a>
             </div>
