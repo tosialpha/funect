@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { List, X } from "@phosphor-icons/react";
-import { Button } from "./ui/button";
+import funectLogo from "../assets/funect-logo.png";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -73,7 +73,7 @@ const Navigation = () => {
                   </Link>
                 )
               )}
-              <Button className="neumorphic glow-hover">Join Funect!</Button>
+              <img src={funectLogo} alt="Funect" className="h-12 w-12 object-contain" />
             </div>
 
             {/* Mobile Menu Button */}
@@ -132,7 +132,7 @@ const Navigation = () => {
                   </Link>
                 )
               )}
-              <Button className="neumorphic glow-hover mt-4">Join Funect!</Button>
+              <img src={funectLogo} alt="Funect" className="h-16 w-16 object-contain mt-4" />
             </div>
           </div>
         </div>
