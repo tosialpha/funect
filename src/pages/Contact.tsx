@@ -24,7 +24,7 @@ const Contact = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 text-gradient">
+            <h1 className="text-5xl md:text-6xl font-bold mb-8 text-gradient leading-tight">
               {t('contact.title')}
             </h1>
             <p className="text-xl md:text-2xl">
