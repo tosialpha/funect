@@ -15,7 +15,7 @@ const translations = {
     // Navigation
     'nav.howItWorks': 'How It Works',
     'nav.faq': 'FAQ',
-    'nav.about': 'About',
+    'nav.about': 'About Us',
     'nav.articles': 'Articles',
     'nav.contact': 'Contact',
     
@@ -86,7 +86,7 @@ const translations = {
     'footer.rights': '2025 Funect. All rights reserved.',
     
     // About
-    'about.title': 'About Funect',
+    'about.title': 'About Us',
     'about.subtitle': 'We\'re on a mission to make sports more social, accessible, and fun for everyone.',
     'about.p1': 'Founded in 2025, Funect started with a simple observation: finding people to play sports with and discovering great venues was unnecessarily difficult. We set out to change that.',
     'about.p2': 'We\'re building a platform to connect athletes of all levels, from casual players to competitive competitors, making it easier to stay active and build meaningful connections through sports.',
