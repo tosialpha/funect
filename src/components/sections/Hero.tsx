@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "../ui/button";
-import heroMockup from "../../assets/hero-mockup.jpg";
+import heroMockup from "../../assets/hero-mockup-new.png";
 
 const Hero = () => {
   return (
