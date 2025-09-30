@@ -157,7 +157,7 @@ const translations = {
     'pricing.feature6': 'Ensisijainen varausjärjestelmä',
     'pricing.feature7': 'Monen sijainnin tuki',
     'pricing.feature8': 'White label -vaihtoehdot',
-    'pricing.cta': 'Ota yhteyttä myyntiin!',
+    'pricing.cta': 'Ota yhteyttä',
     
     // Footer
     'footer.tagline': 'Yhdessä liikunnan kautta. Löydä paikat. Pysy aktiivisena yhdessä.',
