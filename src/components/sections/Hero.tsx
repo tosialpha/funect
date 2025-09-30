@@ -29,7 +29,7 @@ const Hero = () => {
           className="mt-16 w-full max-w-4xl mx-auto h-[500px] md:h-[700px]"
         >
           <Spline 
-            scene="https://prod.spline.design/GuPWfeJuuqsch3W2/scene.splinecode"
+            scene="https://prod.spline.design/K0UkJoRYVt9VXwCF/scene.splinecode"
             style={{ width: '100%', height: '100%' }}
           />
         </motion.div>
