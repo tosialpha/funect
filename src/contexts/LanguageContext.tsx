@@ -200,7 +200,7 @@ const translations = {
     
     // Contact
     'contact.title': 'Ota Yhteyttä',
-    'contact.subtitle': 'Onko sinulla kysyttävää? Haluaisimme kuulla sinusta.',
+    'contact.subtitle': 'Onko sinulla kysyttävää? Haluaisimme kuulla sinulta.',
     'contact.formTitle': 'Lähetä viesti',
     'contact.name': 'Nimi',
     'contact.namePlaceholder': 'Nimesi',
