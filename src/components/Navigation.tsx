@@ -79,7 +79,7 @@ const Navigation = () => {
                 className="flex items-center gap-2 px-3 py-2 rounded-lg border-2 border-primary/20 hover:border-primary hover:bg-primary/10 transition-colors"
                 aria-label="Change language"
               >
-                <span className="text-xl">🇫🇮</span>
+                <span className="text-xl">{language === 'en' ? '🇬🇧' : '🇫🇮'}</span>
                 <span className="font-semibold text-foreground">{language.toUpperCase()}</span>
               </button>
             </div>
@@ -147,7 +147,7 @@ const Navigation = () => {
                 }}
                 className="flex items-center gap-3 px-4 py-3 rounded-lg border-2 border-primary/20 hover:border-primary hover:bg-primary/10 transition-colors mt-4"
               >
-                <span className="text-2xl">🇫🇮</span>
+                <span className="text-2xl">{language === 'en' ? '🇬🇧' : '🇫🇮'}</span>
                 <span className="text-xl font-semibold text-foreground">{language.toUpperCase()}</span>
               </button>
             </div>
