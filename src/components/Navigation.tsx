@@ -33,6 +33,7 @@ const Navigation = () => {
     { label: "Contact", to: "/contact" },
   ] : [
     { label: "Home", to: "/" },
+    { label: "FAQ", to: "/#faq" },
     { label: "About", to: "/about" },
     { label: "Blog", to: "/blog" },
     { label: "Contact", to: "/contact" },
