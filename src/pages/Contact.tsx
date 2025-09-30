@@ -94,7 +94,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold mb-2">{t('contact.phoneLabel')}</h3>
-                    <p className="text-muted-foreground">+1 (555) 123-4567</p>
+                    <p className="text-muted-foreground">+358 44 058 2663</p>
                     <p className="text-sm text-muted-foreground mt-1">{t('contact.phoneHours')}</p>
                   </div>
                 </div>
