@@ -68,7 +68,7 @@ const Hero = () => {
           >
             <div className="mb-4">
               <h2 className="text-4xl md:text-5xl font-bold mb-4">How It Works</h2>
-              <p className="text-xl text-muted-foreground">Getting started is simple</p>
+              <p className="text-xl text-foreground/80">Getting started is simple</p>
             </div>
 
             {steps.map((step, index) => (
@@ -78,14 +78,14 @@ const Hero = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.7 + index * 0.2 }}
               >
-                <Card className="glass p-6">
+                <Card className="border-2 border-border bg-background shadow-md p-6 hover:shadow-lg transition-shadow">
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
                       <step.icon size={24} weight="light" className="text-primary" />
                     </div>
                     <div>
-                      <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
-                      <p className="text-muted-foreground">{step.description}</p>
+                      <h3 className="text-xl font-semibold mb-2 text-foreground">{step.title}</h3>
+                      <p className="text-foreground/80">{step.description}</p>
                     </div>
                   </div>
                 </Card>
