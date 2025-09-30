@@ -141,7 +141,7 @@ const translations = {
     'faq.q3': 'Mitä lajeja Funectissa on saatavilla?',
     'faq.a3': 'Funect tukee laajaa valikoimaa lajeja, mukaan lukien tennis, padel, koripallo, jalkapallo, lentopallo, pickleball ja paljon muuta. Uusia lajeja ja paikkoja lisätään säännöllisesti yhteisön kysynnän mukaan.',
     'faq.q4': 'Miten pelaajien yhteensovitus toimii?',
-    'faq.a4': 'Älykäs yhteensovitusalgoritmi ottaa huomioon taitotasosi, sijaintisi, suosikkiurheilulajisi ja pelailuaikataulusi ehdottaakseen yhteensopivia pelaajia.',
+    'faq.a4': 'Älykäs algoritmi ottaa huomioon taitotasosi, sijaintisi, suosikkiurheilulajisi ja pelailuaikataulusi ehdottaakseen yhteensopivia pelaajia.',
     'faq.q5': 'Voivatko urheilupaikat liittyä Funectiin?',
     'faq.a5': 'Ehdottomasti! Tarjoamme Seura/Yritys-suunnitelman erityisesti paikoille ja urheilujärjestöille. Tämä sisältää hallintatyökaluja, analytiikkaa, mukautettua brändäystä ja paljon muuta. Ota yhteyttä myyntitiimimme saadaksesi mukautetun tarjouksen.',
     
