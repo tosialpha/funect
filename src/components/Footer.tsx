@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { InstagramLogo, TiktokLogo, LinkedinLogo } from "@phosphor-icons/react";
-import appStoreBadges from "../assets/app-store-badges.png";
+import appStoreBadge from "../assets/app-store-badge-new.png";
 
 const Footer = () => {
   return (
@@ -72,9 +72,9 @@ const Footer = () => {
             <div className="flex flex-col gap-3">
               <a href="#" className="hover:opacity-80 transition-opacity">
                 <img 
-                  src={appStoreBadges} 
-                  alt="Available on App Store and Google Play" 
-                  className="w-full max-w-[200px] -ml-2"
+                  src={appStoreBadge} 
+                  alt="Download on the App Store" 
+                  className="w-full max-w-[160px] -ml-2"
                 />
               </a>
             </div>
