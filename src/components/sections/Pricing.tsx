@@ -4,20 +4,22 @@ import { useRef } from "react";
 import { Card } from "../ui/card";
 import { Button } from "../ui/button";
 import { Check } from "@phosphor-icons/react";
+import { useLanguage } from "../../contexts/LanguageContext";
 
 const Pricing = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const { t } = useLanguage();
 
   const features = [
-    "Venue management tools",
-    "Analytics dashboard",
-    "Custom branding",
-    "API access",
-    "Dedicated support",
-    "Priority booking system",
-    "Multi-location support",
-    "White-label options",
+    t('pricing.feature1'),
+    t('pricing.feature2'),
+    t('pricing.feature3'),
+    t('pricing.feature4'),
+    t('pricing.feature5'),
+    t('pricing.feature6'),
+    t('pricing.feature7'),
+    t('pricing.feature8'),
   ];
 
   return (
@@ -29,9 +31,9 @@ const Pricing = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">Club/Enterprise Solutions</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">{t('pricing.title')}</h2>
           <p className="text-xl text-muted-foreground">
-            Custom solutions tailored to your organization's needs
+            {t('pricing.subtitle')}
           </p>
         </motion.div>
 
@@ -44,7 +46,7 @@ const Pricing = () => {
           <Card className="border-2 border-border bg-background/95 backdrop-blur-sm p-12 shadow-xl">
             <div className="text-center mb-8">
               <div className="mb-8">
-                <span className="text-5xl font-bold text-black dark:text-white">Custom Pricing</span>
+                <span className="text-5xl font-bold text-black dark:text-white">{t('pricing.custom')}</span>
               </div>
             </div>
             
@@ -59,7 +61,7 @@ const Pricing = () => {
             
             <div className="text-center">
               <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold text-lg px-12 py-6 shadow-lg">
-                Contact Sales
+                {t('pricing.cta')}
               </Button>
             </div>
           </Card>

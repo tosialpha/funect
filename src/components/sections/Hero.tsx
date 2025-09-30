@@ -3,23 +3,26 @@ import { Button } from "../ui/button";
 import Spline from "@splinetool/react-spline";
 import { Card } from "../ui/card";
 import { MapPin, Users, Trophy } from "@phosphor-icons/react";
+import { useLanguage } from "../../contexts/LanguageContext";
 
 const Hero = () => {
+  const { t } = useLanguage();
+  
   const steps = [
     {
       icon: MapPin,
-      title: "Find a Venue",
-      description: "Browse and discover sports venues near you with real-time availability.",
+      title: t('hero.step1.title'),
+      description: t('hero.step1.desc'),
     },
     {
       icon: Users,
-      title: "Join or Create a Lobby",
-      description: "Connect with players at your skill level and organize matches easily.",
+      title: t('hero.step2.title'),
+      description: t('hero.step2.desc'),
     },
     {
       icon: Trophy,
-      title: "Play and Connect",
-      description: "Meet new people, stay active, and build lasting sports friendships.",
+      title: t('hero.step3.title'),
+      description: t('hero.step3.desc'),
     },
   ];
 
@@ -33,13 +36,13 @@ const Hero = () => {
           className="text-center mb-12"
         >
           <h1 className="text-5xl md:text-7xl font-bold mb-6 text-gradient pb-2 leading-tight">
-            Connect Through Sports
+            {t('hero.title')}
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">
-            Find venues, join lobbies, and meet players. Funect makes it easier than ever to stay active together.
+            {t('hero.subtitle')}
           </p>
           <Button size="lg" className="neumorphic glow-hover text-lg px-8 py-6">
-            Join Funect!
+            {t('hero.cta')}
           </Button>
         </motion.div>
 
@@ -67,8 +70,8 @@ const Hero = () => {
             className="flex flex-col justify-center space-y-6"
           >
             <div className="mb-4">
-              <h2 className="text-4xl md:text-5xl font-bold mb-4">How It Works</h2>
-              <p className="text-xl text-foreground/80">Getting started is simple</p>
+              <h2 className="text-4xl md:text-5xl font-bold mb-4">{t('hero.howItWorks')}</h2>
+              <p className="text-xl text-foreground/80">{t('hero.howItWorksSubtitle')}</p>
             </div>
 
             {steps.map((step, index) => (

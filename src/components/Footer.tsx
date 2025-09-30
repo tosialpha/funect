@@ -2,8 +2,11 @@ import { Link } from "react-router-dom";
 import { InstagramLogo, TiktokLogo, LinkedinLogo } from "@phosphor-icons/react";
 import appStoreBadge from "../assets/app-store-badge-new.png";
 import googlePlayBadge from "../assets/google-play-badge-new.webp";
+import { useLanguage } from "../contexts/LanguageContext";
 
 const Footer = () => {
+  const { t } = useLanguage();
+  
   return (
     <footer className="bg-muted py-16">
       <div className="container mx-auto px-4">
@@ -11,7 +14,7 @@ const Footer = () => {
           <div>
             <h3 className="text-2xl font-semibold mb-4 text-gradient">Funect</h3>
             <p className="text-muted-foreground mb-4">
-              Connect through sports. Discover venues. Stay active together.
+              {t('footer.tagline')}
             </p>
             <div className="flex gap-4">
               <a href="#" className="hover:text-primary transition-colors">
@@ -27,49 +30,49 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="font-semibold mb-4">Product</h4>
+            <h4 className="font-semibold mb-4">{t('footer.product')}</h4>
             <ul className="space-y-2">
               <li>
                 <a href="#faq" className="text-muted-foreground hover:text-primary transition-colors">
-                  FAQ
+                  {t('nav.faq')}
                 </a>
               </li>
               <li>
                 <a href="#pricing" className="text-muted-foreground hover:text-primary transition-colors">
-                  Club/Enterprise
+                  {t('pricing.title')}
                 </a>
               </li>
               <li>
                 <a href="#how-it-works" className="text-muted-foreground hover:text-primary transition-colors">
-                  How It Works
+                  {t('nav.howItWorks')}
                 </a>
               </li>
             </ul>
           </div>
 
           <div>
-            <h4 className="font-semibold mb-4">Company</h4>
+            <h4 className="font-semibold mb-4">{t('footer.company')}</h4>
             <ul className="space-y-2">
               <li>
                 <Link to="/about" className="text-muted-foreground hover:text-primary transition-colors">
-                  About Us
+                  {t('nav.about')}
                 </Link>
               </li>
               <li>
                 <Link to="/blog" className="text-muted-foreground hover:text-primary transition-colors">
-                  Articles
+                  {t('nav.articles')}
                 </Link>
               </li>
               <li>
                 <Link to="/contact" className="text-muted-foreground hover:text-primary transition-colors">
-                  Contact
+                  {t('nav.contact')}
                 </Link>
               </li>
             </ul>
           </div>
 
           <div>
-            <h4 className="font-semibold mb-4">Download App</h4>
+            <h4 className="font-semibold mb-4">{t('footer.downloadApp')}</h4>
             <div className="flex flex-col gap-3">
               <a href="#" className="hover:opacity-80 transition-opacity">
                 <img 
@@ -92,14 +95,14 @@ const Footer = () => {
         <div className="border-t border-border pt-8 text-center text-muted-foreground">
           <div className="flex flex-col md:flex-row justify-center items-center gap-4 mb-4">
             <Link to="/terms" className="hover:text-primary transition-colors">
-              Terms of Service
+              {t('footer.terms')}
             </Link>
             <span className="hidden md:inline">•</span>
             <Link to="/privacy" className="hover:text-primary transition-colors">
-              Privacy Policy
+              {t('footer.privacy')}
             </Link>
           </div>
-          <p>&copy; 2025 Funect. All rights reserved.</p>
+          <p>© {t('footer.rights')}</p>
         </div>
       </div>
     </footer>

@@ -7,31 +7,33 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "../ui/accordion";
+import { useLanguage } from "../../contexts/LanguageContext";
 
 const FAQ = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const { t } = useLanguage();
 
   const faqs = [
     {
-      question: "How does Funect work?",
-      answer: "Funect connects you with sports venues and players in your area. Simply create an account, browse venues or lobbies, and start playing! You can book venues directly or join/create lobbies to find players at your skill level.",
+      question: t('faq.q1'),
+      answer: t('faq.a1'),
     },
     {
-      question: "Is Funect free to use?",
-      answer: "Yes! We offer a free plan that lets you browse venues, join public lobbies, and access our community. Our Pro plan ($9.99/month) unlocks premium features like unlimited lobby creation, priority booking, and tournament access.",
+      question: t('faq.q2'),
+      answer: t('faq.a2'),
     },
     {
-      question: "What sports are available on Funect?",
-      answer: "Funect supports a wide range of sports including tennis, padel, basketball, soccer, volleyball, pickleball, and more. New sports and venues are being added regularly based on community demand.",
+      question: t('faq.q3'),
+      answer: t('faq.a3'),
     },
     {
-      question: "How does player matching work?",
-      answer: "Our smart matching algorithm considers your skill level, location, preferred sports, and playing schedule to suggest compatible players.",
+      question: t('faq.q4'),
+      answer: t('faq.a4'),
     },
     {
-      question: "Can venues join Funect?",
-      answer: "Absolutely! We offer a Club/Enterprise plan specifically for venues and sports organizations. This includes management tools, analytics, custom branding, and more. Contact our sales team for a custom quote.",
+      question: t('faq.q5'),
+      answer: t('faq.a5'),
     },
   ];
 
@@ -44,9 +46,9 @@ const FAQ = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">Frequently Asked Questions</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">{t('faq.title')}</h2>
           <p className="text-xl text-muted-foreground">
-            Got questions? We've got answers
+            {t('faq.subtitle')}
           </p>
         </motion.div>
 

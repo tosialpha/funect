@@ -1,13 +1,14 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { List, X } from "@phosphor-icons/react";
-import funectLogo from "../assets/funect-mascot.png";
+import { List, X, Globe } from "@phosphor-icons/react";
+import { useLanguage } from "../contexts/LanguageContext";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
   const isHomePage = location.pathname === "/";
+  const { language, setLanguage, t } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,17 +27,17 @@ const Navigation = () => {
   };
 
   const navLinks = isHomePage ? [
-    { label: "How It Works", id: "how-it-works" },
-    { label: "About", to: "/about" },
-    { label: "Articles", to: "/blog" },
-    { label: "FAQ", id: "faq" },
-    { label: "Contact", to: "/contact" },
+    { label: t('nav.howItWorks'), id: "how-it-works" },
+    { label: t('nav.about'), to: "/about" },
+    { label: t('nav.articles'), to: "/blog" },
+    { label: t('nav.faq'), id: "faq" },
+    { label: t('nav.contact'), to: "/contact" },
   ] : [
-    { label: "How It Works", to: "/#how-it-works" },
-    { label: "About", to: "/about" },
-    { label: "Articles", to: "/blog" },
-    { label: "FAQ", to: "/#faq" },
-    { label: "Contact", to: "/contact" },
+    { label: t('nav.howItWorks'), to: "/#how-it-works" },
+    { label: t('nav.about'), to: "/about" },
+    { label: t('nav.articles'), to: "/blog" },
+    { label: t('nav.faq'), to: "/#faq" },
+    { label: t('nav.contact'), to: "/contact" },
   ];
 
   return (
@@ -73,7 +74,14 @@ const Navigation = () => {
                   </Link>
                 )
               )}
-              <img src={funectLogo} alt="Funect" className="h-16 w-16 object-contain" />
+              <button
+                onClick={() => setLanguage(language === 'en' ? 'fi' : 'en')}
+                className="flex items-center gap-2 px-3 py-2 rounded-lg border-2 border-primary/20 hover:border-primary hover:bg-primary/10 transition-colors"
+                aria-label="Change language"
+              >
+                <Globe size={20} weight="bold" className="text-primary" />
+                <span className="font-semibold text-foreground">{language.toUpperCase()}</span>
+              </button>
             </div>
 
             {/* Mobile Menu Button */}
@@ -132,7 +140,16 @@ const Navigation = () => {
                   </Link>
                 )
               )}
-              <img src={funectLogo} alt="Funect" className="h-20 w-20 object-contain mt-4" />
+              <button
+                onClick={() => {
+                  setLanguage(language === 'en' ? 'fi' : 'en');
+                  setIsMobileMenuOpen(false);
+                }}
+                className="flex items-center gap-3 px-4 py-3 rounded-lg border-2 border-primary/20 hover:border-primary hover:bg-primary/10 transition-colors mt-4"
+              >
+                <Globe size={24} weight="bold" className="text-primary" />
+                <span className="text-xl font-semibold text-foreground">{language.toUpperCase()}</span>
+              </button>
             </div>
           </div>
         </div>
