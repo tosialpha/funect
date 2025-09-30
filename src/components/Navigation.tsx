@@ -73,7 +73,7 @@ const Navigation = () => {
                   </Link>
                 )
               )}
-              <Button className="neumorphic glow-hover">Get Started</Button>
+              <Button className="neumorphic glow-hover">Join Funect!</Button>
             </div>
 
             {/* Mobile Menu Button */}
@@ -132,7 +132,7 @@ const Navigation = () => {
                   </Link>
                 )
               )}
-              <Button className="neumorphic glow-hover mt-4">Get Started</Button>
+              <Button className="neumorphic glow-hover mt-4">Join Funect!</Button>
             </div>
           </div>
         </div>

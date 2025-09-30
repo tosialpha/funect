@@ -18,7 +18,7 @@ const Hero = () => {
             Find venues, join lobbies, and meet players. Funect makes it easier than ever to stay active together.
           </p>
           <Button size="lg" className="neumorphic glow-hover text-lg px-8 py-6">
-            Get Started
+            Join Funect!
           </Button>
         </motion.div>
 
