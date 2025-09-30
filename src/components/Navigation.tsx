@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { List, X } from "@phosphor-icons/react";
-import funectLogo from "../assets/funect-logo.png";
+import funectLogo from "../assets/funect-mascot.png";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
