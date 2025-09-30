@@ -153,7 +153,7 @@ const translations = {
     'pricing.feature2': 'Analytiikkapaneeli',
     'pricing.feature3': 'Mukautettu brändäys',
     'pricing.feature4': 'API-käyttö',
-    'pricing.feature5': 'Omistettu tuki',
+    'pricing.feature5': 'Omistautunut tuki',
     'pricing.feature6': 'Ensisijainen varausjärjestelmä',
     'pricing.feature7': 'Monen sijainnin tuki',
     'pricing.feature8': 'White label -vaihtoehdot',
