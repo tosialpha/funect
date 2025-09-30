@@ -35,6 +35,16 @@ const translations = {
     // Testimonials
     'testimonials.title': 'What Our Community Says',
     'testimonials.subtitle': 'Real stories from real players',
+    'testimonials.1.quote': "I've met 3 new padel partners through Funect! It's so easy to find people at my skill level.",
+    'testimonials.1.outcome': 'Met 3 new padel partners',
+    'testimonials.2.sport': 'Basketball',
+    'testimonials.2.quote': 'Finally, a way to organize pickup games without endless group chats. Love the lobby system!',
+    'testimonials.2.outcome': 'Organized 15+ games',
+    'testimonials.3.quote': 'Discovered 5 amazing courts near me I didn\'t even know existed. Game changer!',
+    'testimonials.3.outcome': 'Discovered 5 new venues',
+    'testimonials.4.sport': 'Soccer',
+    'testimonials.4.quote': 'The community tournaments are incredible. Met so many awesome people through Funect.',
+    'testimonials.4.outcome': 'Joined 8 tournaments',
     
     // Mission  
     'mission.title': 'Our Mission',
@@ -137,6 +147,16 @@ const translations = {
     // Testimonials
     'testimonials.title': 'Mitä yhteisömme sanoo',
     'testimonials.subtitle': 'Oikeita tarinoita oikeilta pelaajilta:',
+    'testimonials.1.quote': 'Olen löytänyt kolme uutta padel-kaveria Funectin kautta! On niin helppoa löytää ihmisiä omalla tasollani.',
+    'testimonials.1.outcome': 'Löysi 3 uutta pelikaveria',
+    'testimonials.2.sport': 'Koripallo',
+    'testimonials.2.quote': 'Vihdoin tapa järjestää pickup-pelejä ilman loputtomia ryhmäkeskusteluja. Rakastan lobby-järjestelmää!',
+    'testimonials.2.outcome': 'Järjesti yli 15 peliä',
+    'testimonials.3.quote': 'Löysin 5 upeaa kenttää läheltäni, joista en tiennyt mitään. Todellinen pelinmuuttaja!',
+    'testimonials.3.outcome': 'Löysi 5 uutta kenttää',
+    'testimonials.4.sport': 'Jalkapallo',
+    'testimonials.4.quote': 'Yhteisön turnaukset ovat mahtavia. Olen tavannut niin paljon upeita ihmisiä Funectin kautta.',
+    'testimonials.4.outcome': 'Osallistui 8 turnaukseen',
     
     // Mission
     'mission.title': 'Missiomme',

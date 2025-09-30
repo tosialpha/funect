@@ -14,26 +14,26 @@ const Testimonials = () => {
     {
       name: "Veeti Karppinen",
       sport: "Padel",
-      quote: "I've met 3 new padel partners through Funect! It's so easy to find people at my skill level.",
-      outcome: "Met 3 new padel partners",
+      quote: t('testimonials.1.quote'),
+      outcome: t('testimonials.1.outcome'),
     },
     {
       name: "Yassin Daoussi",
-      sport: "Basketball",
-      quote: "Finally, a way to organize pickup games without endless group chats. Love the lobby system!",
-      outcome: "Organized 15+ games",
+      sport: t('testimonials.2.sport'),
+      quote: t('testimonials.2.quote'),
+      outcome: t('testimonials.2.outcome'),
     },
     {
       name: "Alexandr Malmberg",
       sport: "Tennis",
-      quote: "Discovered 5 amazing courts near me I didn't even know existed. Game changer!",
-      outcome: "Discovered 5 new venues",
+      quote: t('testimonials.3.quote'),
+      outcome: t('testimonials.3.outcome'),
     },
     {
       name: "Veeti Eerola",
-      sport: "Soccer",
-      quote: "The community tournaments are incredible. Met so many awesome people through Funect.",
-      outcome: "Joined 8 tournaments",
+      sport: t('testimonials.4.sport'),
+      quote: t('testimonials.4.quote'),
+      outcome: t('testimonials.4.outcome'),
     },
   ];
 
