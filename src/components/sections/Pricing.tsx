@@ -41,24 +41,24 @@ const Pricing = () => {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="max-w-3xl mx-auto"
         >
-          <Card className="glass p-12">
+          <Card className="border-2 border-border bg-background/95 backdrop-blur-sm p-12 shadow-xl">
             <div className="text-center mb-8">
               <div className="mb-8">
-                <span className="text-5xl font-bold">Custom Pricing</span>
+                <span className="text-5xl font-bold text-foreground">Custom Pricing</span>
               </div>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
               {features.map((feature) => (
                 <div key={feature} className="flex items-start gap-3">
-                  <Check size={24} weight="bold" className="text-secondary mt-1 flex-shrink-0" />
-                  <span className="text-lg">{feature}</span>
+                  <Check size={24} weight="bold" className="text-primary mt-1 flex-shrink-0" />
+                  <span className="text-lg font-medium text-foreground">{feature}</span>
                 </div>
               ))}
             </div>
             
             <div className="text-center">
-              <Button size="lg" className="neumorphic glow-hover text-lg px-12 py-6">
+              <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold text-lg px-12 py-6 shadow-lg">
                 Contact Sales
               </Button>
             </div>
