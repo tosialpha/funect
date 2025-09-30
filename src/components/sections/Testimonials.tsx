@@ -3,10 +3,12 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Card } from "../ui/card";
 import { Star } from "@phosphor-icons/react";
+import { useLanguage } from "../../contexts/LanguageContext";
 
 const Testimonials = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const { t } = useLanguage();
 
   const testimonials = [
     {
@@ -44,9 +46,9 @@ const Testimonials = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">What Our Community Says</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">{t('testimonials.title')}</h2>
           <p className="text-xl text-muted-foreground">
-            Real stories from real players
+            {t('testimonials.subtitle')}
           </p>
         </motion.div>
 

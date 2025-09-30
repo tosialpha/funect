@@ -32,7 +32,13 @@ const translations = {
     'hero.step3.title': 'Play and Connect',
     'hero.step3.desc': 'Meet new people, stay active, and build lasting sports friendships.',
     
-    // FAQ
+    // Testimonials
+    'testimonials.title': 'What Our Community Says',
+    'testimonials.subtitle': 'Real stories from real players',
+    
+    // Mission  
+    'mission.title': 'Our Mission',
+    'mission.text': 'At Funect, we believe sports have the power to bring people together. Our mission is to make staying active and building connections easier than ever—to find great venues, stay active, and build community. Whether you\'re a seasoned athlete or just starting out, Funect helps you find your sport, your venue, and your teammates.',
     'faq.title': 'Frequently Asked Questions',
     'faq.subtitle': 'Got questions? We\'ve got answers',
     'faq.q1': 'How does Funect work?',
@@ -105,20 +111,28 @@ const translations = {
     'nav.contact': 'Yhteystiedot',
     
     // Hero
-    'hero.title': 'Yhdistä Liikunnan Kautta',
-    'hero.subtitle': 'Löydä paikat, liity lobbyihin ja tapaa pelaajia. Funect tekee aktiivisena pysymisestä helpompaa kuin koskaan.',
+    'hero.title': 'Yhdistä liikunnan kautta',
+    'hero.subtitle': 'Löydä paikat, liity lobbyihin ja tapaa uusia pelikavereita. Funect tekee aktiivisena pysymisestä helpompaa kuin koskaan.',
     'hero.cta': 'Liity Funectiin!',
-    'hero.howItWorks': 'Miten Se Toimii',
-    'hero.howItWorksSubtitle': 'Aloittaminen on helppoa',
-    'hero.step1.title': 'Löydä Paikka',
+    'hero.howItWorks': 'Miten se toimii',
+    'hero.howItWorksSubtitle': 'Aloittaminen on helppoa:',
+    'hero.step1.title': 'Löydä paikka',
     'hero.step1.desc': 'Selaa ja löydä urheilupaikkoja läheltäsi reaaliaikaisella saatavuudella.',
-    'hero.step2.title': 'Liity tai Luo Lobby',
-    'hero.step2.desc': 'Yhdistä pelaajiin taitotasollasi ja järjestä otteluita helposti.',
-    'hero.step3.title': 'Pelaa ja Yhdistä',
-    'hero.step3.desc': 'Tapaa uusia ihmisiä, pysy aktiivisena ja rakenna kestäviä urheiluystävyyksiä.',
+    'hero.step2.title': 'Liity tai luo lobby',
+    'hero.step2.desc': 'Yhdistä pelaajiin, joilla on sama taitotaso, ja järjestä otteluita vaivattomasti.',
+    'hero.step3.title': 'Pelaa ja yhdistä',
+    'hero.step3.desc': 'Tapaa uusia ihmisiä, pysy aktiivisena ja luo pysyviä urheiluystäviä.',
+    
+    // Testimonials
+    'testimonials.title': 'Mitä yhteisömme sanoo',
+    'testimonials.subtitle': 'Oikeita tarinoita oikeilta pelaajilta:',
+    
+    // Mission
+    'mission.title': 'Missiomme',
+    'mission.text': 'Funectissa uskomme, että urheilulla on voima tuoda ihmiset yhteen. Missiomme on tehdä liikkumisesta ja yhteyksien luomisesta helpompaa kuin koskaan — löytää upeita paikkoja, pysyä aktiivisena ja rakentaa yhteisöä. Olitpa kokenut urheilija tai vasta aloittamassa, Funect auttaa sinua löytämään oman lajisi, paikkasi ja pelikaverisi.',
     
     // FAQ
-    'faq.title': 'Usein Kysytyt Kysymykset',
+    'faq.title': 'Usein kysytyt kysymykset',
     'faq.subtitle': 'Onko sinulla kysymyksiä? Meillä on vastaukset',
     'faq.q1': 'Miten Funect toimii?',
     'faq.a1': 'Funect yhdistää sinut urheilupaikkoihin ja pelaajiin alueellasi. Luo tili, selaa paikkoja tai lobbeja ja aloita pelaaminen! Voit varata paikkoja suoraan tai liittyä/luoda lobbeja löytääksesi pelaajia taitotasollasi.',
@@ -128,13 +142,13 @@ const translations = {
     'faq.a3': 'Funect tukee laajaa valikoimaa lajeja, mukaan lukien tennis, padel, koripallo, jalkapallo, lentopallo, pickleball ja paljon muuta. Uusia lajeja ja paikkoja lisätään säännöllisesti yhteisön kysynnän mukaan.',
     'faq.q4': 'Miten pelaajien yhteensovitus toimii?',
     'faq.a4': 'Älykäs yhteensovitusalgoritmi ottaa huomioon taitotasosi, sijaintisi, suosikkiurheilulajisi ja pelailuaikataulusi ehdottaakseen yhteensopivia pelaajia.',
-    'faq.q5': 'Voivatko paikat liittyä Funectiin?',
-    'faq.a5': 'Ehdottomasti! Tarjoamme Club/Enterprise-suunnitelman erityisesti paikoille ja urheilujärjestöille. Tämä sisältää hallintatyökaluja, analytiikkaa, mukautettua brändäystä ja paljon muuta. Ota yhteyttä myyntitiimimme saadaksesi mukautetun tarjouksen.',
+    'faq.q5': 'Voivatko urheilupaikat liittyä Funectiin?',
+    'faq.a5': 'Ehdottomasti! Tarjoamme Seura/Yritys-suunnitelman erityisesti paikoille ja urheilujärjestöille. Tämä sisältää hallintatyökaluja, analytiikkaa, mukautettua brändäystä ja paljon muuta. Ota yhteyttä myyntitiimimme saadaksesi mukautetun tarjouksen.',
     
     // Pricing
-    'pricing.title': 'Seura/Yritysratkaisut',
-    'pricing.subtitle': 'Räätälöidyt ratkaisut organisaatiosi tarpeisiin',
-    'pricing.custom': 'Mukautettu Hinnoittelu',
+    'pricing.title': 'Seura- ja yritysratkaisut',
+    'pricing.subtitle': 'Räätälöidyt palvelut organisaatioille:',
+    'pricing.custom': 'Mukautettu hinnoittelu',
     'pricing.feature1': 'Paikan hallintatyökalut',
     'pricing.feature2': 'Analytiikkapaneeli',
     'pricing.feature3': 'Mukautettu brändäys',
@@ -142,14 +156,14 @@ const translations = {
     'pricing.feature5': 'Omistettu tuki',
     'pricing.feature6': 'Ensisijainen varausjärjestelmä',
     'pricing.feature7': 'Monen sijainnin tuki',
-    'pricing.feature8': 'White-label vaihtoehdot',
-    'pricing.cta': 'Ota Yhteyttä Myyntiin',
+    'pricing.feature8': 'White label -vaihtoehdot',
+    'pricing.cta': 'Ota yhteyttä myyntiin!',
     
     // Footer
     'footer.tagline': 'Yhdistä liikunnan kautta. Löydä paikat. Pysy aktiivisena yhdessä.',
     'footer.product': 'Tuote',
     'footer.company': 'Yritys',
-    'footer.downloadApp': 'Lataa Sovellus',
+    'footer.downloadApp': 'Lataa sovellus',
     'footer.terms': 'Käyttöehdot',
     'footer.privacy': 'Tietosuojakäytäntö',
     'footer.rights': '2025 Funect. Kaikki oikeudet pidätetään.',
