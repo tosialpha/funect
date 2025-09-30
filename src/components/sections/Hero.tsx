@@ -11,7 +11,7 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 text-gradient">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 text-gradient pb-2 leading-tight">
             Connect Through Sports
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">
