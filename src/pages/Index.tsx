@@ -8,9 +8,9 @@ import FAQ from "@/components/sections/FAQ";
 
 const Index = () => {
   return (
-    <div className="relative bg-white">
+    <div className="relative min-h-screen bg-white">
       {/* Animated Fluid Background with Glassmorphism */}
-      <div className="absolute top-0 left-0 right-0 bottom-0 z-0 overflow-hidden pointer-events-none" style={{ minHeight: '100vh' }}>
+      <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none">
         {/* White overlay at top for text readability */}
         <div 
           className="absolute top-0 left-0 right-0 h-[500px] z-10"
