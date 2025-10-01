@@ -9,7 +9,7 @@ const Mission = () => {
   const { t } = useLanguage();
 
   return (
-    <section ref={ref} className="py-20 px-4 bg-gradient-to-br from-primary/5 to-secondary/5">
+    <section ref={ref} className="py-20 px-4">
       <div className="container mx-auto max-w-4xl text-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
