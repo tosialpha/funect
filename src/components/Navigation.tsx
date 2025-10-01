@@ -23,41 +23,31 @@ const Navigation = () => {
     // Handle hash navigation when coming from another page or refreshing
     if (location.hash) {
       const id = location.hash.replace('#', '');
-      console.log('[Navigation] Hash detected:', id, 'pathname:', location.pathname);
       
-      // Wait for page to fully render, then scroll
+      // Use a longer delay to ensure all components are mounted
       const timer = setTimeout(() => {
         const element = document.getElementById(id);
-        console.log('[Navigation] Looking for element:', id, 'found:', !!element);
         if (element) {
-          const top = element.offsetTop - 80; // Account for fixed nav
-          console.log('[Navigation] Scrolling to:', top, 'element offsetTop:', element.offsetTop);
-          window.scrollTo({ top, behavior: "smooth" });
+          element.scrollIntoView({ behavior: "smooth", block: "start" });
         }
-      }, 300);
+      }, 500);
       
       return () => clearTimeout(timer);
     } else if (location.pathname === "/" && !location.hash) {
-      console.log('[Navigation] No hash, scrolling to top');
       // If navigating to home without hash, scroll to top
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
   }, [location]);
 
   const scrollToSection = (id: string) => {
-    console.log('[Navigation] scrollToSection called for:', id);
     const element = document.getElementById(id);
-    console.log('[Navigation] Element found:', !!element);
     if (element) {
-      const top = element.offsetTop - 80; // Account for fixed nav height
-      console.log('[Navigation] Scrolling to:', top, 'current scroll:', window.scrollY);
-      window.scrollTo({ top, behavior: "smooth" });
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
       setIsMobileMenuOpen(false);
     }
   };
 
   const handleHashNavigation = (hash: string) => {
-    console.log('[Navigation] handleHashNavigation called for:', hash, 'isHomePage:', isHomePage);
     if (!isHomePage) {
       navigate(`/#${hash}`);
     } else {
