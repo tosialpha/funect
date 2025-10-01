@@ -232,8 +232,4 @@ All colors MUST be HSL.
   .testimonial-scroll {
     animation: scroll-testimonials 40s linear infinite;
   }
-
-  .testimonial-scroll:hover {
-    animation-play-state: paused;
-  }
 }
