@@ -8,7 +8,7 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 195 60% 96%;
+    --background: 195 70% 97%;
     --foreground: 220 20% 10%;
 
     --card: 0 0% 100%;
@@ -39,11 +39,20 @@ All colors MUST be HSL.
 
     --radius: 1rem;
 
+    /* Vibrant Gradients with Pastel Tones */
     --gradient-primary: linear-gradient(135deg, hsl(195 100% 50%), hsl(175 85% 55%));
     --gradient-secondary: linear-gradient(135deg, hsl(165 80% 50%), hsl(195 100% 50%));
     --gradient-subtle: linear-gradient(180deg, hsl(195 60% 96%), hsl(195 50% 94%));
+    --gradient-vibrant: linear-gradient(135deg, hsl(200 80% 92%), hsl(180 70% 88%));
+    --gradient-hero: linear-gradient(180deg, hsl(195 70% 97%) 0%, hsl(185 65% 95%) 50%, hsl(195 55% 93%) 100%);
+    --gradient-accent: linear-gradient(120deg, hsl(15 100% 88%), hsl(195 80% 90%), hsl(175 70% 88%));
+    --gradient-overlay: radial-gradient(circle at 20% 50%, hsl(195 80% 90% / 0.3), transparent 50%),
+                        radial-gradient(circle at 80% 20%, hsl(175 70% 85% / 0.25), transparent 50%),
+                        radial-gradient(circle at 40% 80%, hsl(15 90% 88% / 0.2), transparent 50%);
     
-    --shadow-glow: 0 0 40px hsl(195 100% 50% / 0.3);
+    /* Enhanced Shadows and Glows */
+    --shadow-glow: 0 0 50px hsl(195 100% 50% / 0.4);
+    --shadow-soft-glow: 0 8px 32px hsl(195 80% 70% / 0.15);
     --shadow-neumorphic: 8px 8px 16px hsl(195 30% 85%), -8px -8px 16px hsl(0 0% 100%);
     --shadow-neumorphic-inset: inset 4px 4px 8px hsl(195 30% 85%), inset -4px -4px 8px hsl(0 0% 100%);
     
@@ -111,8 +120,28 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground font-light;
+    @apply text-foreground font-light;
     font-family: 'Inter', sans-serif;
+    background: var(--gradient-hero);
+    position: relative;
+    overflow-x: hidden;
+  }
+  
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--gradient-overlay);
+    pointer-events: none;
+    z-index: 0;
+  }
+  
+  body > * {
+    position: relative;
+    z-index: 1;
   }
   
   h1, h2, h3, h4, h5, h6 {
@@ -152,5 +181,75 @@ All colors MUST be HSL.
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+  }
+  
+  /* Abstract Background Shapes */
+  .bg-abstract-shapes {
+    position: relative;
+  }
+  
+  .bg-abstract-shapes::before,
+  .bg-abstract-shapes::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.08;
+    z-index: -1;
+  }
+  
+  .bg-abstract-shapes::before {
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, hsl(195 80% 70%), transparent 70%);
+    top: -200px;
+    right: -200px;
+    animation: float 20s ease-in-out infinite;
+  }
+  
+  .bg-abstract-shapes::after {
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, hsl(175 70% 65%), transparent 70%);
+    bottom: -150px;
+    left: -150px;
+    animation: float 15s ease-in-out infinite reverse;
+  }
+  
+  /* Soft Glow Effect */
+  .soft-glow {
+    box-shadow: var(--shadow-soft-glow);
+  }
+  
+  /* Wave Pattern */
+  .wave-pattern {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .wave-pattern::before {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120'%3E%3Cpath d='M0,64L48,69.3C96,75,192,85,288,80C384,75,480,53,576,48C672,43,768,53,864,64C960,75,1056,85,1152,80C1248,75,1344,53,1392,42.7L1440,32L1440,120L1392,120C1344,120,1248,120,1152,120C1056,120,960,120,864,120C768,120,672,120,576,120C480,120,384,120,288,120C192,120,96,120,48,120L0,120Z' fill='%23ffffff' fill-opacity='0.3'/%3E%3C/svg%3E") no-repeat bottom;
+    background-size: cover;
+    pointer-events: none;
+  }
+  
+  @keyframes float {
+    0%, 100% {
+      transform: translate(0, 0) rotate(0deg);
+    }
+    25% {
+      transform: translate(30px, -30px) rotate(5deg);
+    }
+    50% {
+      transform: translate(-20px, 20px) rotate(-3deg);
+    }
+    75% {
+      transform: translate(20px, 10px) rotate(3deg);
+    }
   }
 }
