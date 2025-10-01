@@ -8,9 +8,9 @@ import FAQ from "@/components/sections/FAQ";
 
 const Index = () => {
   return (
-    <div className="min-h-screen relative bg-white">
-      {/* Animated Fluid Background with Glassmorphism - Extended */}
-      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none min-h-full">
+    <div className="relative bg-white">
+      {/* Animated Fluid Background with Glassmorphism */}
+      <div className="absolute top-0 left-0 right-0 bottom-0 z-0 overflow-hidden pointer-events-none" style={{ minHeight: '100vh' }}>
         {/* White overlay at top for text readability */}
         <div 
           className="absolute top-0 left-0 right-0 h-[500px] z-10"
@@ -37,9 +37,9 @@ const Index = () => {
           }}
         />
         
-        {/* Middle Section Blobs */}
+        {/* Extra Large Bottom Blob */}
         <div 
-          className="gradient-blob-3 absolute top-[60%] left-1/2 -translate-x-1/2 w-[1000px] h-[1000px] rounded-full"
+          className="gradient-blob-3 absolute bottom-0 left-1/2 -translate-x-1/2 w-[1000px] h-[1000px] rounded-full"
           style={{
             background: 'linear-gradient(135deg, rgb(32, 178, 170), rgb(72, 209, 204), rgb(175, 238, 238))',
             filter: 'blur(50px)',
@@ -58,7 +58,7 @@ const Index = () => {
 
         {/* Medium Teal Blob - Right Center */}
         <div 
-          className="gradient-blob-1 absolute top-[50%] right-1/4 w-[650px] h-[650px] rounded-full"
+          className="gradient-blob-1 absolute top-1/2 right-1/4 w-[650px] h-[650px] rounded-full"
           style={{
             background: 'radial-gradient(ellipse, rgb(0, 139, 139), rgb(72, 209, 204), rgb(175, 238, 238))',
             filter: 'blur(38px)',
@@ -66,32 +66,13 @@ const Index = () => {
           }}
         />
 
-        {/* Bottom Section Blobs for FAQ area */}
+        {/* Small Accent Blob - Bottom Right */}
         <div 
-          className="gradient-blob-2 absolute top-[80%] -left-48 w-[800px] h-[800px] rounded-full"
+          className="gradient-blob-drift absolute bottom-1/4 right-1/4 w-[500px] h-[500px] rounded-full"
           style={{
             background: 'radial-gradient(circle, rgb(64, 224, 208), rgb(127, 255, 212), rgb(175, 238, 238))',
-            filter: 'blur(42px)',
-            animationDelay: '7s',
-          }}
-        />
-
-        {/* Bottom Right Blob */}
-        <div 
-          className="gradient-blob-drift absolute top-[85%] right-1/4 w-[600px] h-[600px] rounded-full"
-          style={{
-            background: 'radial-gradient(circle, rgb(0, 191, 255), rgb(135, 206, 250), rgb(176, 224, 230))',
-            filter: 'blur(35px)',
+            filter: 'blur(32px)',
             animationDelay: '15s',
-          }}
-        />
-
-        {/* Very Bottom Blob for Footer */}
-        <div 
-          className="gradient-blob-3 absolute bottom-0 left-1/3 w-[900px] h-[900px] rounded-full"
-          style={{
-            background: 'linear-gradient(135deg, rgb(0, 206, 209), rgb(64, 224, 208), rgb(127, 255, 212))',
-            filter: 'blur(48px)',
           }}
         />
       </div>
