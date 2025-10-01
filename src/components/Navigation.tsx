@@ -23,19 +23,31 @@ const Navigation = () => {
     // Handle hash navigation when coming from another page
     if (location.hash) {
       const id = location.hash.replace('#', '');
-      setTimeout(() => {
+      
+      // Try multiple times with increasing delays to ensure element is rendered
+      const scrollToHash = (attempts = 0) => {
         const element = document.getElementById(id);
         if (element) {
-          element.scrollIntoView({ behavior: "smooth" });
+          // Use requestAnimationFrame for smoother scrolling
+          requestAnimationFrame(() => {
+            element.scrollIntoView({ behavior: "smooth", block: "start" });
+          });
+        } else if (attempts < 5) {
+          // Retry up to 5 times with increasing delays
+          setTimeout(() => scrollToHash(attempts + 1), 100 * (attempts + 1));
         }
-      }, 100);
+      };
+      
+      scrollToHash();
     }
   }, [location]);
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      requestAnimationFrame(() => {
+        element.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
       setIsMobileMenuOpen(false);
     }
   };
