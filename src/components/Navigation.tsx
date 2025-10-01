@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { List, X } from "@phosphor-icons/react";
 import { useLanguage } from "../contexts/LanguageContext";
 
@@ -7,6 +7,7 @@ const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
   const isHomePage = location.pathname === "/";
   const { language, setLanguage, t } = useLanguage();
 
@@ -18,11 +19,32 @@ const Navigation = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    // Handle hash navigation when coming from another page
+    if (location.hash) {
+      const id = location.hash.replace('#', '');
+      setTimeout(() => {
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100);
+    }
+  }, [location]);
+
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
       setIsMobileMenuOpen(false);
+    }
+  };
+
+  const handleHashNavigation = (hash: string) => {
+    if (!isHomePage) {
+      navigate(`/#${hash}`);
+    } else {
+      scrollToSection(hash);
     }
   };
 
@@ -34,11 +56,11 @@ const Navigation = () => {
     { label: t('nav.faq'), id: "faq" },
     { label: t('nav.contact'), to: "/contact" },
   ] : [
-    { label: t('nav.howItWorks'), to: "/#how-it-works" },
-    { label: t('nav.forVenues'), to: "/#pricing" },
+    { label: t('nav.howItWorks'), hash: "how-it-works" },
+    { label: t('nav.forVenues'), hash: "pricing" },
     { label: t('nav.about'), to: "/about" },
     { label: t('nav.articles'), to: "/blog" },
-    { label: t('nav.faq'), to: "/#faq" },
+    { label: t('nav.faq'), hash: "faq" },
     { label: t('nav.contact'), to: "/contact" },
   ];
 
@@ -62,6 +84,14 @@ const Navigation = () => {
                   <button
                     key={link.id}
                     onClick={() => scrollToSection(link.id)}
+                    className="text-foreground hover:text-primary transition-colors"
+                  >
+                    {link.label}
+                  </button>
+                ) : "hash" in link ? (
+                  <button
+                    key={link.hash}
+                    onClick={() => handleHashNavigation(link.hash)}
                     className="text-foreground hover:text-primary transition-colors"
                   >
                     {link.label}
@@ -130,6 +160,17 @@ const Navigation = () => {
                   <button
                     key={link.id}
                     onClick={() => scrollToSection(link.id)}
+                    className="text-xl text-foreground hover:text-primary transition-colors text-left"
+                  >
+                    {link.label}
+                  </button>
+                ) : "hash" in link ? (
+                  <button
+                    key={link.hash}
+                    onClick={() => {
+                      handleHashNavigation(link.hash);
+                      setIsMobileMenuOpen(false);
+                    }}
                     className="text-xl text-foreground hover:text-primary transition-colors text-left"
                   >
                     {link.label}

@@ -33,7 +33,7 @@ const HowItWorks = () => {
   ];
 
   return (
-    <section id="how-it-works" ref={ref} className="py-20 px-4 bg-muted">
+    <section id="how-it-works" ref={ref} className="py-20 px-4 bg-muted scroll-mt-20">
       <div className="container mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
