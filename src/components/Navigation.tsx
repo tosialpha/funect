@@ -85,7 +85,7 @@ const Navigation = () => {
       >
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-20">
-            <Link to="/" className="text-2xl font-semibold text-gradient">
+            <Link to="/" className="text-2xl font-semibold text-white drop-shadow-[0_2px_8px_rgba(0,24,80,0.4)]">
               Funect
             </Link>
 
@@ -96,7 +96,7 @@ const Navigation = () => {
                   <button
                     key={link.id}
                     onClick={() => scrollToSection(link.id)}
-                    className="text-foreground hover:text-primary transition-colors"
+                    className="text-white hover:text-primary-glow transition-colors drop-shadow-[0_1px_4px_rgba(0,24,80,0.3)] font-medium"
                   >
                     {link.label}
                   </button>
@@ -104,7 +104,7 @@ const Navigation = () => {
                   <button
                     key={link.hash}
                     onClick={() => handleHashNavigation(link.hash)}
-                    className="text-foreground hover:text-primary transition-colors"
+                    className="text-white hover:text-primary-glow transition-colors drop-shadow-[0_1px_4px_rgba(0,24,80,0.3)] font-medium"
                   >
                     {link.label}
                   </button>
@@ -112,7 +112,7 @@ const Navigation = () => {
                   <Link
                     key={link.to}
                     to={link.to!}
-                    className="text-foreground hover:text-primary transition-colors"
+                    className="text-white hover:text-primary-glow transition-colors drop-shadow-[0_1px_4px_rgba(0,24,80,0.3)] font-medium"
                   >
                     {link.label}
                   </Link>
@@ -123,17 +123,17 @@ const Navigation = () => {
             <div className="hidden md:block">
               <button
                 onClick={() => setLanguage(language === 'en' ? 'fi' : 'en')}
-                className="flex items-center gap-2 px-3 py-2 rounded-lg border-2 border-primary/20 hover:border-primary hover:bg-primary/10 transition-colors"
+                className="flex items-center gap-2 px-3 py-2 rounded-lg border-2 border-white/30 hover:border-white hover:bg-white/10 transition-colors backdrop-blur-sm"
                 aria-label="Change language"
               >
                 <span className="text-xl">{language === 'en' ? '🇬🇧' : '🇫🇮'}</span>
-                <span className="font-semibold text-foreground">{language.toUpperCase()}</span>
+                <span className="font-semibold text-white drop-shadow-[0_1px_4px_rgba(0,24,80,0.3)]">{language.toUpperCase()}</span>
               </button>
             </div>
 
             {/* Mobile Menu Button */}
             <button
-              className="md:hidden p-2"
+              className="md:hidden p-2 text-white drop-shadow-[0_1px_4px_rgba(0,24,80,0.3)]"
               onClick={() => setIsMobileMenuOpen(true)}
             >
               <List size={28} weight="light" />
