@@ -24,42 +24,30 @@ const Navigation = () => {
     if (location.hash) {
       const id = location.hash.replace('#', '');
       
-      // Use a longer delay to ensure all components are mounted
+      // Wait longer for all components to mount when navigating between pages
       const timer = setTimeout(() => {
         const element = document.getElementById(id);
         if (element) {
-          element.scrollIntoView({ behavior: "smooth", block: "start" });
+          const navHeight = 80;
+          const targetPosition = element.offsetTop - navHeight;
+          window.scrollTo({ top: targetPosition, behavior: "smooth" });
         }
-      }, 500);
+      }, 100);
       
       return () => clearTimeout(timer);
     } else if (location.pathname === "/" && !location.hash) {
       // If navigating to home without hash, scroll to top
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
-  }, [location]);
+  }, [location.pathname, location.hash]);
 
   const scrollToSection = (id: string) => {
-    alert('Scroll function called for: ' + id); // This will show if the function is called
-    console.log('Scrolling to:', id);
     const element = document.getElementById(id);
-    console.log('Element found:', element);
-    console.log('Current scroll position:', window.scrollY);
-    
     if (element) {
-      // Force immediate scroll using offsetTop calculation
       const navHeight = 80;
       const targetPosition = element.offsetTop - navHeight;
-      console.log('Target position:', targetPosition);
-      
-      window.scrollTo({
-        top: targetPosition,
-        behavior: 'smooth'
-      });
-      
+      window.scrollTo({ top: targetPosition, behavior: "smooth" });
       setIsMobileMenuOpen(false);
-    } else {
-      console.log('Element not found with id:', id);
     }
   };
 
@@ -96,36 +84,19 @@ const Navigation = () => {
         style={{ pointerEvents: 'auto' }}
       >
         <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between h-20 relative z-[101]">
-            <Link 
-              to="/" 
-              className="text-2xl font-semibold text-gradient relative z-[101]"
-              onClick={() => alert('Logo clicked!')}
-            >
+          <div className="flex items-center justify-between h-20">
+            <Link to="/" className="text-2xl font-semibold text-gradient">
               Funect
             </Link>
 
             {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center gap-8 relative z-[101]" style={{ background: 'rgba(255,0,0,0.1)' }}>
-              <button
-                onClick={() => alert('TEST BUTTON CLICKED!')}
-                className="text-foreground hover:text-primary transition-colors px-4 py-2 bg-red-500"
-                style={{ pointerEvents: 'all', zIndex: 9999, position: 'relative' }}
-              >
-                TEST BUTTON
-              </button>
+            <div className="hidden md:flex items-center gap-8 absolute left-1/2 transform -translate-x-1/2">
               {navLinks.map((link) =>
                 "id" in link ? (
                   <button
                     key={link.id}
-                    onClick={(e) => {
-                      e.preventDefault();
-                      e.stopPropagation();
-                      alert('Button clicked! ID: ' + link.id);
-                      scrollToSection(link.id);
-                    }}
-                    className="text-foreground hover:text-primary transition-colors cursor-pointer relative z-50"
-                    style={{ pointerEvents: 'auto' }}
+                    onClick={() => scrollToSection(link.id)}
+                    className="text-foreground hover:text-primary transition-colors"
                   >
                     {link.label}
                   </button>
