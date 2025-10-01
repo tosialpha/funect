@@ -10,13 +10,13 @@ const Footer = () => {
   return (
     <footer className="bg-muted py-16">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12 justify-items-center text-center">
           <div>
             <h3 className="text-2xl font-semibold mb-4 text-gradient">Funect</h3>
             <p className="text-muted-foreground mb-4">
               {t('footer.tagline')}
             </p>
-            <div className="flex gap-4">
+            <div className="flex gap-4 justify-center">
               <a href="#" className="hover:text-primary transition-colors">
                 <InstagramLogo size={24} weight="light" />
               </a>
@@ -73,19 +73,19 @@ const Footer = () => {
 
           <div>
             <h4 className="font-semibold mb-4">{t('footer.downloadApp')}</h4>
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-3 items-center">
               <a href="#" className="hover:opacity-80 transition-opacity">
                 <img 
                   src={appStoreBadge} 
                   alt="Download on the App Store" 
-                  className="w-full max-w-[160px] -ml-2"
+                  className="w-full max-w-[160px]"
                 />
               </a>
               <a href="#" className="hover:opacity-80 transition-opacity">
                 <img 
                   src={googlePlayBadge} 
                   alt="Get it on Google Play" 
-                  className="w-full max-w-[160px] -ml-2"
+                  className="w-full max-w-[160px]"
                 />
               </a>
             </div>
