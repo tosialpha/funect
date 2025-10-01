@@ -40,6 +40,7 @@ const Navigation = () => {
   }, [location]);
 
   const scrollToSection = (id: string) => {
+    alert('Scroll function called for: ' + id); // This will show if the function is called
     console.log('Scrolling to:', id);
     const element = document.getElementById(id);
     console.log('Element found:', element);
