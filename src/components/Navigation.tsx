@@ -79,13 +79,15 @@ const Navigation = () => {
     <>
       <nav
         className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 ${
-          isScrolled ? "backdrop-blur-md bg-background/80" : "bg-transparent"
+          isScrolled 
+            ? "backdrop-blur-xl bg-gradient-to-r from-[#003366]/95 to-[#004C99]/95 shadow-lg border-b border-white/10" 
+            : "bg-gradient-to-r from-black/40 to-black/30 backdrop-blur-sm"
         }`}
         style={{ pointerEvents: 'auto' }}
       >
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-20">
-            <Link to="/" className="text-2xl font-semibold text-white drop-shadow-[0_2px_8px_rgba(0,24,80,0.4)]">
+            <Link to="/" className="text-2xl font-semibold text-white drop-shadow-[0_2px_8px_rgba(0,195,255,0.3)] hover:text-[#A8F5FF] transition-colors">
               Funect
             </Link>
 
@@ -96,7 +98,7 @@ const Navigation = () => {
                   <button
                     key={link.id}
                     onClick={() => scrollToSection(link.id)}
-                    className="text-white hover:text-primary-glow transition-colors drop-shadow-[0_1px_4px_rgba(0,24,80,0.3)] font-medium"
+                    className="text-white hover:text-[#00C6FF] transition-colors drop-shadow-[0_1px_4px_rgba(0,0,0,0.3)] font-medium tracking-wide"
                   >
                     {link.label}
                   </button>
@@ -104,7 +106,7 @@ const Navigation = () => {
                   <button
                     key={link.hash}
                     onClick={() => handleHashNavigation(link.hash)}
-                    className="text-white hover:text-primary-glow transition-colors drop-shadow-[0_1px_4px_rgba(0,24,80,0.3)] font-medium"
+                    className="text-white hover:text-[#00C6FF] transition-colors drop-shadow-[0_1px_4px_rgba(0,0,0,0.3)] font-medium tracking-wide"
                   >
                     {link.label}
                   </button>
@@ -112,7 +114,7 @@ const Navigation = () => {
                   <Link
                     key={link.to}
                     to={link.to!}
-                    className="text-white hover:text-primary-glow transition-colors drop-shadow-[0_1px_4px_rgba(0,24,80,0.3)] font-medium"
+                    className="text-white hover:text-[#00C6FF] transition-colors drop-shadow-[0_1px_4px_rgba(0,0,0,0.3)] font-medium tracking-wide"
                   >
                     {link.label}
                   </Link>
@@ -123,17 +125,17 @@ const Navigation = () => {
             <div className="hidden md:block">
               <button
                 onClick={() => setLanguage(language === 'en' ? 'fi' : 'en')}
-                className="flex items-center gap-2 px-3 py-2 rounded-lg border-2 border-white/30 hover:border-white hover:bg-white/10 transition-colors backdrop-blur-sm"
+                className="flex items-center gap-2 px-4 py-2 rounded-full border-2 border-white/40 hover:border-[#00C6FF] hover:bg-white/10 transition-all backdrop-blur-md shadow-lg"
                 aria-label="Change language"
               >
                 <span className="text-xl">{language === 'en' ? '🇬🇧' : '🇫🇮'}</span>
-                <span className="font-semibold text-white drop-shadow-[0_1px_4px_rgba(0,24,80,0.3)]">{language.toUpperCase()}</span>
+                <span className="font-semibold text-white drop-shadow-[0_1px_4px_rgba(0,0,0,0.3)]">{language.toUpperCase()}</span>
               </button>
             </div>
 
             {/* Mobile Menu Button */}
             <button
-              className="md:hidden p-2 text-white drop-shadow-[0_1px_4px_rgba(0,24,80,0.3)]"
+              className="md:hidden p-2 text-white drop-shadow-[0_1px_4px_rgba(0,0,0,0.4)]"
               onClick={() => setIsMobileMenuOpen(true)}
             >
               <List size={28} weight="light" />
