@@ -35,10 +35,10 @@ const Hero = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 text-gradient pb-2 leading-tight">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 text-black pb-2 leading-tight">
             {t('hero.title')}
           </h1>
-          <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">
+          <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto text-black">
             {t('hero.subtitle')}
           </p>
           <Button size="lg" className="neumorphic glow-hover text-lg px-8 py-6">
