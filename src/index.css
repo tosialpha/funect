@@ -218,4 +218,22 @@ All colors MUST be HSL.
     animation: gentle-drift 60s ease-in-out infinite;
     will-change: transform, opacity;
   }
+
+  /* Testimonial Auto-Scroll Animation */
+  @keyframes scroll-testimonials {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .testimonial-scroll {
+    animation: scroll-testimonials 40s linear infinite;
+  }
+
+  .testimonial-scroll:hover {
+    animation-play-state: paused;
+  }
 }
