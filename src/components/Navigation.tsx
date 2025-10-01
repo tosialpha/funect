@@ -20,34 +20,31 @@ const Navigation = () => {
   }, []);
 
   useEffect(() => {
-    // Handle hash navigation when coming from another page
+    // Handle hash navigation when coming from another page or refreshing
     if (location.hash) {
       const id = location.hash.replace('#', '');
       
-      // Try multiple times with increasing delays to ensure element is rendered
-      const scrollToHash = (attempts = 0) => {
+      // Wait for page to fully render, then scroll
+      const timer = setTimeout(() => {
         const element = document.getElementById(id);
         if (element) {
-          // Use requestAnimationFrame for smoother scrolling
-          requestAnimationFrame(() => {
-            element.scrollIntoView({ behavior: "smooth", block: "start" });
-          });
-        } else if (attempts < 5) {
-          // Retry up to 5 times with increasing delays
-          setTimeout(() => scrollToHash(attempts + 1), 100 * (attempts + 1));
+          const top = element.offsetTop - 80; // Account for fixed nav
+          window.scrollTo({ top, behavior: "smooth" });
         }
-      };
+      }, 300);
       
-      scrollToHash();
+      return () => clearTimeout(timer);
+    } else if (location.pathname === "/" && !location.hash) {
+      // If navigating to home without hash, scroll to top
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }
   }, [location]);
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      requestAnimationFrame(() => {
-        element.scrollIntoView({ behavior: "smooth", block: "start" });
-      });
+      const top = element.offsetTop - 80; // Account for fixed nav height
+      window.scrollTo({ top, behavior: "smooth" });
       setIsMobileMenuOpen(false);
     }
   };
