@@ -101,13 +101,19 @@ const Navigation = () => {
             </Link>
 
             {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center gap-8 absolute left-1/2 transform -translate-x-1/2">
+            <div className="hidden md:flex items-center gap-8 absolute left-1/2 transform -translate-x-1/2 z-50">
               {navLinks.map((link) =>
                 "id" in link ? (
                   <button
                     key={link.id}
-                    onClick={() => scrollToSection(link.id)}
-                    className="text-foreground hover:text-primary transition-colors"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      e.stopPropagation();
+                      alert('Button clicked! ID: ' + link.id);
+                      scrollToSection(link.id);
+                    }}
+                    className="text-foreground hover:text-primary transition-colors cursor-pointer relative z-50"
+                    style={{ pointerEvents: 'auto' }}
                   >
                     {link.label}
                   </button>
