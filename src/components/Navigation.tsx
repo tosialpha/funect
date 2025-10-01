@@ -96,13 +96,24 @@ const Navigation = () => {
         style={{ pointerEvents: 'auto' }}
       >
         <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between h-20">
-            <Link to="/" className="text-2xl font-semibold text-gradient">
+          <div className="flex items-center justify-between h-20 relative z-[101]">
+            <Link 
+              to="/" 
+              className="text-2xl font-semibold text-gradient relative z-[101]"
+              onClick={() => alert('Logo clicked!')}
+            >
               Funect
             </Link>
 
             {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center gap-8 absolute left-1/2 transform -translate-x-1/2 z-50">
+            <div className="hidden md:flex items-center gap-8 relative z-[101]" style={{ background: 'rgba(255,0,0,0.1)' }}>
+              <button
+                onClick={() => alert('TEST BUTTON CLICKED!')}
+                className="text-foreground hover:text-primary transition-colors px-4 py-2 bg-red-500"
+                style={{ pointerEvents: 'all', zIndex: 9999, position: 'relative' }}
+              >
+                TEST BUTTON
+              </button>
               {navLinks.map((link) =>
                 "id" in link ? (
                   <button
