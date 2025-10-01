@@ -40,10 +40,25 @@ const Navigation = () => {
   }, [location]);
 
   const scrollToSection = (id: string) => {
+    console.log('Scrolling to:', id);
     const element = document.getElementById(id);
+    console.log('Element found:', element);
+    console.log('Current scroll position:', window.scrollY);
+    
     if (element) {
-      element.scrollIntoView({ behavior: "smooth", block: "start" });
+      // Force immediate scroll using offsetTop calculation
+      const navHeight = 80;
+      const targetPosition = element.offsetTop - navHeight;
+      console.log('Target position:', targetPosition);
+      
+      window.scrollTo({
+        top: targetPosition,
+        behavior: 'smooth'
+      });
+      
       setIsMobileMenuOpen(false);
+    } else {
+      console.log('Element not found with id:', id);
     }
   };
 
