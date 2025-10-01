@@ -38,7 +38,7 @@ const FAQ = () => {
   ];
 
   return (
-    <section id="faq" ref={ref} className="py-20 px-4 bg-muted">
+    <section id="faq" ref={ref} className="py-20 px-4 bg-muted scroll-mt-20">
       <div className="container mx-auto max-w-3xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
