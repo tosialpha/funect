@@ -8,71 +8,63 @@ import FAQ from "@/components/sections/FAQ";
 
 const Index = () => {
   return (
-    <div className="min-h-screen relative overflow-hidden bg-white">
+    <div className="min-h-screen relative bg-white">
       {/* Animated Fluid Background with Glassmorphism */}
-      <div className="fixed inset-0 -z-10 overflow-hidden">
+      <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none">
         {/* Large Primary Blob - Top Right */}
         <div 
-          className="gradient-blob-1 absolute -top-64 -right-64 w-[900px] h-[900px]"
+          className="gradient-blob-1 absolute -top-32 -right-32 w-[800px] h-[800px]"
           style={{
-            background: 'radial-gradient(ellipse at 30% 30%, rgba(100, 200, 255, 0.4), rgba(80, 180, 230, 0.3), rgba(130, 220, 250, 0.2))',
-            filter: 'blur(60px)',
+            background: 'linear-gradient(135deg, rgba(0, 180, 216, 0.5), rgba(72, 202, 228, 0.4), rgba(144, 224, 239, 0.3))',
+            filter: 'blur(40px)',
           }}
         />
         
         {/* Large Secondary Blob - Left Center */}
         <div 
-          className="gradient-blob-2 absolute top-1/4 -left-96 w-[1000px] h-[1000px]"
+          className="gradient-blob-2 absolute top-1/4 -left-64 w-[900px] h-[900px]"
           style={{
-            background: 'radial-gradient(ellipse at 60% 40%, rgba(70, 190, 220, 0.38), rgba(110, 210, 235, 0.28), rgba(150, 230, 245, 0.18))',
-            filter: 'blur(70px)',
+            background: 'linear-gradient(135deg, rgba(0, 206, 209, 0.45), rgba(64, 224, 208, 0.35), rgba(127, 255, 212, 0.25))',
+            filter: 'blur(45px)',
           }}
         />
         
         {/* Extra Large Bottom Blob */}
         <div 
-          className="gradient-blob-3 absolute -bottom-48 left-1/2 -translate-x-1/2 w-[1100px] h-[1100px]"
+          className="gradient-blob-3 absolute bottom-0 left-1/2 -translate-x-1/2 w-[1000px] h-[1000px]"
           style={{
-            background: 'radial-gradient(ellipse at 50% 50%, rgba(120, 215, 240, 0.42), rgba(90, 200, 225, 0.32), rgba(160, 235, 250, 0.22))',
-            filter: 'blur(80px)',
+            background: 'linear-gradient(135deg, rgba(32, 178, 170, 0.48), rgba(72, 209, 204, 0.38), rgba(175, 238, 238, 0.28))',
+            filter: 'blur(50px)',
           }}
         />
 
         {/* Medium Accent Blob - Upper Left */}
         <div 
-          className="gradient-blob-drift absolute top-32 left-1/4 w-[650px] h-[650px]"
+          className="gradient-blob-drift absolute top-20 left-1/4 w-[600px] h-[600px]"
           style={{
-            background: 'radial-gradient(circle at 40% 50%, rgba(85, 205, 225, 0.36), rgba(125, 225, 240, 0.26), rgba(165, 235, 245, 0.16))',
-            filter: 'blur(55px)',
+            background: 'radial-gradient(circle, rgba(0, 191, 255, 0.42), rgba(135, 206, 250, 0.32), rgba(176, 224, 230, 0.22))',
+            filter: 'blur(35px)',
             animationDelay: '5s',
           }}
         />
 
         {/* Medium Teal Blob - Right Center */}
         <div 
-          className="gradient-blob-1 absolute top-1/3 right-1/4 w-[700px] h-[700px]"
+          className="gradient-blob-1 absolute top-1/3 right-1/4 w-[650px] h-[650px]"
           style={{
-            background: 'radial-gradient(ellipse at 70% 30%, rgba(60, 180, 210, 0.4), rgba(100, 210, 230, 0.3), rgba(140, 225, 240, 0.2))',
-            filter: 'blur(65px)',
+            background: 'radial-gradient(ellipse, rgba(0, 139, 139, 0.46), rgba(72, 209, 204, 0.36), rgba(175, 238, 238, 0.26))',
+            filter: 'blur(38px)',
             animationDelay: '10s',
           }}
         />
 
         {/* Small Accent Blob - Bottom Right */}
         <div 
-          className="gradient-blob-drift absolute bottom-1/4 right-1/3 w-[500px] h-[500px]"
+          className="gradient-blob-drift absolute bottom-1/4 right-1/4 w-[500px] h-[500px]"
           style={{
-            background: 'radial-gradient(circle at 60% 60%, rgba(105, 215, 235, 0.34), rgba(145, 230, 242, 0.24), rgba(175, 240, 248, 0.14))',
-            filter: 'blur(50px)',
+            background: 'radial-gradient(circle, rgba(64, 224, 208, 0.4), rgba(127, 255, 212, 0.3), rgba(175, 238, 238, 0.2))',
+            filter: 'blur(32px)',
             animationDelay: '15s',
-          }}
-        />
-
-        {/* Overlay for subtle depth */}
-        <div 
-          className="absolute inset-0" 
-          style={{
-            background: 'radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.2), transparent 70%)',
           }}
         />
       </div>
