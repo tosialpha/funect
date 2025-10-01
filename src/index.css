@@ -154,84 +154,68 @@ All colors MUST be HSL.
     background-clip: text;
   }
 
-  /* Animated Gradient Background Blobs */
-  @keyframes liquid-flow-1 {
+  /* Animated Gradient Background Blobs - Smooth and Subtle */
+  @keyframes gentle-float-1 {
     0%, 100% {
       transform: translate(0, 0) scale(1);
-      border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-    }
-    25% {
-      transform: translate(5%, -5%) scale(1.05);
-      border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+      opacity: 0.5;
     }
     50% {
-      transform: translate(-3%, 3%) scale(0.98);
-      border-radius: 40% 50% 60% 40% / 60% 40% 50% 60%;
-    }
-    75% {
-      transform: translate(3%, 5%) scale(1.02);
-      border-radius: 50% 40% 30% 60% / 40% 60% 50% 50%;
+      transform: translate(20px, -15px) scale(1.03);
+      opacity: 0.42;
     }
   }
 
-  @keyframes liquid-flow-2 {
+  @keyframes gentle-float-2 {
     0%, 100% {
       transform: translate(0, 0) scale(1);
-      border-radius: 40% 60% 60% 40% / 60% 40% 60% 40%;
+      opacity: 0.45;
     }
-    33% {
-      transform: translate(-4%, 6%) scale(1.08);
-      border-radius: 60% 40% 40% 60% / 40% 60% 40% 60%;
-    }
-    66% {
-      transform: translate(6%, -4%) scale(0.95);
-      border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+    50% {
+      transform: translate(-15px, 20px) scale(1.02);
+      opacity: 0.38;
     }
   }
 
-  @keyframes liquid-flow-3 {
+  @keyframes gentle-float-3 {
     0%, 100% {
       transform: translate(0, 0) scale(1);
-      border-radius: 55% 45% 45% 55% / 55% 45% 55% 45%;
+      opacity: 0.48;
     }
     50% {
-      transform: translate(4%, 4%) scale(1.06);
-      border-radius: 45% 55% 55% 45% / 45% 55% 45% 55%;
+      transform: translate(10px, 10px) scale(1.04);
+      opacity: 0.4;
     }
   }
 
-  @keyframes liquid-drift {
+  @keyframes gentle-drift {
     0%, 100% {
-      transform: translateY(0) translateX(0) rotate(0deg);
-      border-radius: 50% 50% 45% 55% / 50% 50% 55% 45%;
-    }
-    25% {
-      transform: translateY(-2%) translateX(2%) rotate(5deg);
-      border-radius: 45% 55% 50% 50% / 55% 45% 50% 50%;
+      transform: translateY(0) translateX(0);
+      opacity: 0.42;
     }
     50% {
-      transform: translateY(2%) translateX(-2%) rotate(-5deg);
-      border-radius: 55% 45% 55% 45% / 50% 50% 45% 55%;
-    }
-    75% {
-      transform: translateY(-1%) translateX(1%) rotate(3deg);
-      border-radius: 50% 50% 50% 50% / 45% 55% 50% 50%;
+      transform: translateY(15px) translateX(-10px);
+      opacity: 0.35;
     }
   }
 
   .gradient-blob-1 {
-    animation: liquid-flow-1 40s ease-in-out infinite;
+    animation: gentle-float-1 45s ease-in-out infinite;
+    will-change: transform, opacity;
   }
 
   .gradient-blob-2 {
-    animation: liquid-flow-2 35s ease-in-out infinite;
+    animation: gentle-float-2 50s ease-in-out infinite;
+    will-change: transform, opacity;
   }
 
   .gradient-blob-3 {
-    animation: liquid-flow-3 45s ease-in-out infinite;
+    animation: gentle-float-3 55s ease-in-out infinite;
+    will-change: transform, opacity;
   }
 
   .gradient-blob-drift {
-    animation: liquid-drift 50s ease-in-out infinite;
+    animation: gentle-drift 60s ease-in-out infinite;
+    will-change: transform, opacity;
   }
 }
