@@ -15,10 +15,8 @@ const Index = () => {
         <div 
           className="gradient-blob-1 absolute -top-64 -right-64 w-[900px] h-[900px]"
           style={{
-            background: 'radial-gradient(ellipse at 30% 30%, rgba(165, 230, 245, 0.6), rgba(125, 215, 235, 0.4), rgba(180, 240, 250, 0.3))',
-            filter: 'blur(80px)',
-            backdropFilter: 'blur(10px)',
-            boxShadow: '0 8px 32px 0 rgba(125, 215, 235, 0.2)',
+            background: 'radial-gradient(ellipse at 30% 30%, rgba(100, 200, 255, 0.4), rgba(80, 180, 230, 0.3), rgba(130, 220, 250, 0.2))',
+            filter: 'blur(60px)',
           }}
         />
         
@@ -26,10 +24,8 @@ const Index = () => {
         <div 
           className="gradient-blob-2 absolute top-1/4 -left-96 w-[1000px] h-[1000px]"
           style={{
-            background: 'radial-gradient(ellipse at 60% 40%, rgba(130, 220, 230, 0.5), rgba(160, 235, 240, 0.35), rgba(190, 245, 250, 0.25))',
-            filter: 'blur(90px)',
-            backdropFilter: 'blur(10px)',
-            boxShadow: '0 8px 32px 0 rgba(160, 235, 240, 0.15)',
+            background: 'radial-gradient(ellipse at 60% 40%, rgba(70, 190, 220, 0.38), rgba(110, 210, 235, 0.28), rgba(150, 230, 245, 0.18))',
+            filter: 'blur(70px)',
           }}
         />
         
@@ -37,10 +33,8 @@ const Index = () => {
         <div 
           className="gradient-blob-3 absolute -bottom-48 left-1/2 -translate-x-1/2 w-[1100px] h-[1100px]"
           style={{
-            background: 'radial-gradient(ellipse at 50% 50%, rgba(175, 235, 245, 0.55), rgba(145, 225, 235, 0.4), rgba(200, 245, 250, 0.3))',
-            filter: 'blur(100px)',
-            backdropFilter: 'blur(10px)',
-            boxShadow: '0 8px 32px 0 rgba(175, 235, 245, 0.18)',
+            background: 'radial-gradient(ellipse at 50% 50%, rgba(120, 215, 240, 0.42), rgba(90, 200, 225, 0.32), rgba(160, 235, 250, 0.22))',
+            filter: 'blur(80px)',
           }}
         />
 
@@ -48,9 +42,8 @@ const Index = () => {
         <div 
           className="gradient-blob-drift absolute top-32 left-1/4 w-[650px] h-[650px]"
           style={{
-            background: 'radial-gradient(circle at 40% 50%, rgba(140, 225, 235, 0.45), rgba(170, 240, 245, 0.3), rgba(190, 245, 250, 0.2))',
-            filter: 'blur(70px)',
-            backdropFilter: 'blur(8px)',
+            background: 'radial-gradient(circle at 40% 50%, rgba(85, 205, 225, 0.36), rgba(125, 225, 240, 0.26), rgba(165, 235, 245, 0.16))',
+            filter: 'blur(55px)',
             animationDelay: '5s',
           }}
         />
@@ -59,9 +52,8 @@ const Index = () => {
         <div 
           className="gradient-blob-1 absolute top-1/3 right-1/4 w-[700px] h-[700px]"
           style={{
-            background: 'radial-gradient(ellipse at 70% 30%, rgba(120, 210, 220, 0.5), rgba(155, 230, 240, 0.35), rgba(185, 240, 245, 0.25))',
-            filter: 'blur(85px)',
-            backdropFilter: 'blur(10px)',
+            background: 'radial-gradient(ellipse at 70% 30%, rgba(60, 180, 210, 0.4), rgba(100, 210, 230, 0.3), rgba(140, 225, 240, 0.2))',
+            filter: 'blur(65px)',
             animationDelay: '10s',
           }}
         />
@@ -70,9 +62,8 @@ const Index = () => {
         <div 
           className="gradient-blob-drift absolute bottom-1/4 right-1/3 w-[500px] h-[500px]"
           style={{
-            background: 'radial-gradient(circle at 60% 60%, rgba(155, 230, 240, 0.4), rgba(180, 240, 245, 0.28), rgba(200, 245, 250, 0.18))',
-            filter: 'blur(65px)',
-            backdropFilter: 'blur(8px)',
+            background: 'radial-gradient(circle at 60% 60%, rgba(105, 215, 235, 0.34), rgba(145, 230, 242, 0.24), rgba(175, 240, 248, 0.14))',
+            filter: 'blur(50px)',
             animationDelay: '15s',
           }}
         />
@@ -81,7 +72,7 @@ const Index = () => {
         <div 
           className="absolute inset-0" 
           style={{
-            background: 'radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.3), transparent 70%)',
+            background: 'radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.2), transparent 70%)',
           }}
         />
       </div>
