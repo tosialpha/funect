@@ -8,7 +8,7 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 195 100% 98%;
+    --background: 195 60% 96%;
     --foreground: 220 20% 10%;
 
     --card: 0 0% 100%;
@@ -19,15 +19,15 @@ All colors MUST be HSL.
 
     --primary: 195 100% 50%;
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 213 100% 60%;
+    --primary-glow: 195 100% 65%;
 
-    --secondary: 168 49% 52%;
+    --secondary: 165 80% 50%;
     --secondary-foreground: 0 0% 100%;
 
     --muted: 195 50% 92%;
     --muted-foreground: 220 15% 35%;
 
-    --accent: 349 100% 71%;
+    --accent: 195 100% 50%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
@@ -39,33 +39,15 @@ All colors MUST be HSL.
 
     --radius: 1rem;
 
-    /* Balanced Vibrant Gradients - Deep Blue to Light Aqua */
-    --gradient-primary: linear-gradient(135deg, hsl(213 100% 40%), hsl(195 100% 50%));
-    --gradient-secondary: linear-gradient(135deg, hsl(168 49% 52%), hsl(64 100% 83%));
-    --gradient-accent: linear-gradient(135deg, hsl(9 100% 77%), hsl(349 100% 71%), hsl(258 50% 68%));
-    --gradient-hero: linear-gradient(180deg, 
-                      hsl(213 100% 30%) 0%, 
-                      hsl(213 100% 40%) 15%,
-                      hsl(195 100% 50%) 50%,
-                      hsl(188 100% 65%) 85%,
-                      hsl(185 100% 85%) 100%);
-    --gradient-overlay: radial-gradient(ellipse at 15% 20%, hsl(195 100% 50% / 0.12), transparent 45%),
-                        radial-gradient(ellipse at 85% 10%, hsl(213 100% 45% / 0.1), transparent 50%),
-                        radial-gradient(circle at 10% 95%, hsl(258 50% 68% / 0.08), transparent 40%),
-                        radial-gradient(circle at 90% 90%, hsl(349 100% 71% / 0.06), transparent 45%);
-    --gradient-blob-1: radial-gradient(circle, hsl(195 100% 50% / 0.2), hsl(213 100% 60% / 0.12), transparent 70%);
-    --gradient-blob-2: radial-gradient(circle, hsl(258 50% 68% / 0.15), hsl(349 100% 71% / 0.08), transparent 65%);
-    --gradient-blob-3: radial-gradient(circle, hsl(168 49% 52% / 0.18), hsl(64 100% 83% / 0.1), transparent 70%);
+    --gradient-primary: linear-gradient(135deg, hsl(195 100% 50%), hsl(175 85% 55%));
+    --gradient-secondary: linear-gradient(135deg, hsl(165 80% 50%), hsl(195 100% 50%));
+    --gradient-subtle: linear-gradient(180deg, hsl(195 60% 96%), hsl(195 50% 94%));
     
-    /* Dynamic Glows */
-    --shadow-glow: 0 0 60px hsl(195 100% 50% / 0.6);
-    --shadow-glow-accent: 0 0 50px hsl(349 100% 71% / 0.5);
-    --shadow-soft-glow: 0 10px 40px hsl(213 100% 50% / 0.25);
-    --shadow-nav-text: 0 2px 8px hsl(213 100% 10% / 0.3);
+    --shadow-glow: 0 0 40px hsl(195 100% 50% / 0.3);
     --shadow-neumorphic: 8px 8px 16px hsl(195 30% 85%), -8px -8px 16px hsl(0 0% 100%);
     --shadow-neumorphic-inset: inset 4px 4px 8px hsl(195 30% 85%), inset -4px -4px 8px hsl(0 0% 100%);
     
-    --glass-bg: hsl(0 0% 100% / 0.85);
+    --glass-bg: hsl(0 0% 100% / 0.8);
     --glass-border: hsl(195 30% 85%);
     
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -129,47 +111,8 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply text-foreground font-light;
+    @apply bg-background text-foreground font-light;
     font-family: 'Inter', sans-serif;
-    background: var(--gradient-hero);
-    position: relative;
-    overflow-x: hidden;
-  }
-  
-  /* Dynamic Overlay Layers */
-  body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: var(--gradient-overlay);
-    pointer-events: none;
-    z-index: 0;
-  }
-  
-  /* Animated Glowing Blobs */
-  body::after {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 0;
-    background: 
-      radial-gradient(ellipse 700px 500px at 10% 20%, hsl(195 100% 50% / 0.1), transparent),
-      radial-gradient(circle 400px at 90% 15%, hsl(213 100% 45% / 0.08), transparent),
-      radial-gradient(circle 500px at 8% 92%, hsl(258 50% 68% / 0.06), transparent),
-      radial-gradient(circle 450px at 92% 88%, hsl(349 100% 71% / 0.05), transparent);
-    animation: blobShift 25s ease-in-out infinite;
-  }
-  
-  body > * {
-    position: relative;
-    z-index: 1;
   }
   
   h1, h2, h3, h4, h5, h6 {
@@ -184,7 +127,7 @@ All colors MUST be HSL.
 @layer utilities {
   .glass {
     background: var(--glass-bg);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(2px);
     border: 1px solid var(--glass-border);
   }
   
@@ -209,172 +152,5 @@ All colors MUST be HSL.
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-  }
-  
-  /* Dynamic Background Shapes */
-  .bg-dynamic-shapes {
-    position: relative;
-  }
-  
-  .bg-dynamic-shapes::before,
-  .bg-dynamic-shapes::after {
-    content: '';
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(80px);
-    z-index: -1;
-    animation: pulse 8s ease-in-out infinite;
-  }
-  
-  .bg-dynamic-shapes::before {
-    width: 700px;
-    height: 700px;
-    background: var(--gradient-blob-1);
-    top: -250px;
-    right: -250px;
-    animation: floatDynamic 22s ease-in-out infinite;
-  }
-  
-  .bg-dynamic-shapes::after {
-    width: 600px;
-    height: 600px;
-    background: var(--gradient-blob-2);
-    bottom: -200px;
-    left: -200px;
-    animation: floatDynamic 18s ease-in-out infinite reverse;
-  }
-  
-  /* Enhanced Glow */
-  .soft-glow {
-    box-shadow: var(--shadow-soft-glow);
-  }
-  
-  .glow-accent {
-    box-shadow: var(--shadow-glow-accent);
-  }
-  
-  /* Wave Pattern with Gradient */
-  .wave-pattern {
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .wave-pattern::before {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 200%;
-    height: 150px;
-    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M0,64L48,69.3C96,75,192,85,288,80C384,75,480,53,576,48C672,43,768,53,864,64C960,75,1056,85,1152,80C1248,75,1344,53,1392,42.7L1440,32L1440,120L1392,120C1344,120,1248,120,1152,120C1056,120,960,120,864,120C768,120,672,120,576,120C480,120,384,120,288,120C192,120,96,120,48,120L0,120Z' fill='%2300C6FF' fill-opacity='0.06'/%3E%3Cpath d='M0,80L48,85.3C96,91,192,101,288,96C384,91,480,69,576,64C672,59,768,69,864,80C960,91,1056,101,1152,96C1248,91,1344,69,1392,58.7L1440,48L1440,120L1392,120C1344,120,1248,120,1152,120C1056,120,960,120,864,120C768,120,672,120,576,120C480,120,384,120,288,120C192,120,96,120,48,120L0,120Z' fill='%23A8F5FF' fill-opacity='0.04'/%3E%3C/svg%3E") repeat-x bottom;
-    background-size: 1200px 150px;
-    pointer-events: none;
-    animation: waveShift 25s linear infinite;
-  }
-  
-  /* Subtle curve shapes across sections */
-  .section-curves {
-    position: relative;
-  }
-  
-  .section-curves::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 200px;
-    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M0,0L48,10.7C96,21,192,43,288,48C384,53,480,43,576,37.3C672,32,768,32,864,37.3C960,43,1056,53,1152,53.3C1248,53,1344,43,1392,37.3L1440,32L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z' fill='%23ffffff' fill-opacity='0.05'/%3E%3C/svg%3E") no-repeat top;
-    background-size: cover;
-    pointer-events: none;
-    transform: rotate(180deg);
-  }
-  
-  /* Geometric Shape Overlays */
-  .geometric-overlay {
-    position: relative;
-  }
-  
-  .geometric-overlay::before {
-    content: '';
-    position: absolute;
-    top: 10%;
-    right: 5%;
-    width: 300px;
-    height: 300px;
-    background: var(--gradient-blob-3);
-    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-    filter: blur(60px);
-    opacity: 0.4;
-    z-index: -1;
-    animation: morphShape 20s ease-in-out infinite;
-  }
-  
-  /* Animations */
-  @keyframes floatDynamic {
-    0%, 100% {
-      transform: translate(0, 0) rotate(0deg) scale(1);
-    }
-    25% {
-      transform: translate(40px, -40px) rotate(8deg) scale(1.05);
-    }
-    50% {
-      transform: translate(-30px, 30px) rotate(-5deg) scale(0.95);
-    }
-    75% {
-      transform: translate(25px, 15px) rotate(5deg) scale(1.02);
-    }
-  }
-  
-  @keyframes pulse {
-    0%, 100% {
-      opacity: 0.3;
-    }
-    50% {
-      opacity: 0.5;
-    }
-  }
-  
-  @keyframes blobShift {
-    0%, 100% {
-      opacity: 1;
-      transform: scale(1);
-    }
-    33% {
-      opacity: 0.8;
-      transform: scale(1.1) translateX(30px);
-    }
-    66% {
-      opacity: 0.9;
-      transform: scale(0.95) translateX(-20px);
-    }
-  }
-  
-  @keyframes morphShape {
-    0%, 100% {
-      border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-      transform: rotate(0deg);
-    }
-    25% {
-      border-radius: 58% 42% 75% 25% / 76% 46% 54% 24%;
-      transform: rotate(90deg);
-    }
-    50% {
-      border-radius: 50% 50% 33% 67% / 55% 27% 73% 45%;
-      transform: rotate(180deg);
-    }
-    75% {
-      border-radius: 33% 67% 58% 42% / 63% 68% 32% 37%;
-      transform: rotate(270deg);
-    }
-  }
-  
-  @keyframes waveShift {
-    0% {
-      background-position-x: 0;
-    }
-    100% {
-      background-position-x: 1200px;
-    }
   }
 }
