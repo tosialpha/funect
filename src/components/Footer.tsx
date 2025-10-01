@@ -9,9 +9,9 @@ const Footer = () => {
   
   return (
     <footer className="bg-muted py-16">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12 justify-items-center text-center">
-          <div>
+      <div className="container mx-auto px-4 max-w-6xl">
+        <div className="flex flex-col md:flex-row md:justify-center md:items-start gap-12 mb-12 text-center md:gap-16">
+          <div className="flex-1 max-w-xs mx-auto">
             <h3 className="text-2xl font-semibold mb-4 text-gradient">Funect</h3>
             <p className="text-muted-foreground mb-4">
               {t('footer.tagline')}
@@ -29,7 +29,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div>
+          <div className="flex-1 max-w-xs mx-auto">
             <h4 className="font-semibold mb-4">{t('footer.product')}</h4>
             <ul className="space-y-2">
               <li>
@@ -50,7 +50,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div>
+          <div className="flex-1 max-w-xs mx-auto">
             <h4 className="font-semibold mb-4">{t('footer.company')}</h4>
             <ul className="space-y-2">
               <li>
@@ -71,7 +71,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div>
+          <div className="flex-1 max-w-xs mx-auto">
             <h4 className="font-semibold mb-4">{t('footer.downloadApp')}</h4>
             <div className="flex flex-col gap-3 items-center">
               <a href="#" className="hover:opacity-80 transition-opacity">
