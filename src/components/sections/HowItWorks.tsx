@@ -15,19 +15,19 @@ const HowItWorks = () => {
     {
       icon: MapPin,
       title: "Find a Venue",
-      description: "Browse and discover sports venues near you with real-time availability.",
+      description: "Browse and discover activity venues near you with real-time availability.",
       image: image1,
     },
     {
       icon: Users,
-      title: "Join or Create a Lobby",
-      description: "Connect with players at your skill level and organize matches easily.",
+      title: "Join or Create a Group",
+      description: "Connect with people at your level and organize sessions easily.",
       image: image2,
     },
     {
       icon: Trophy,
-      title: "Play and Connect",
-      description: "Meet new people, stay active, and build lasting sports friendships.",
+      title: "Get Active and Connect",
+      description: "Meet new people, stay active, and build lasting friendships.",
       image: image3,
     },
   ];

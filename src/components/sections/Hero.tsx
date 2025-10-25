@@ -55,8 +55,8 @@ const Hero = () => {
             className="w-full h-[750px] relative isolate -mt-44"
           >
             <div className="absolute inset-0 [&_canvas]:!bg-transparent [&>div]:!bg-transparent pointer-events-none">
-              <Spline 
-                scene="https://prod.spline.design/K0UkJoRYVt9VXwCF/scene.splinecode"
+              <Spline
+                scene="/dynamic_i_phone_mockup.spline"
                 style={{ width: '100%', height: '100%', background: 'transparent', pointerEvents: 'none' }}
               />
             </div>

@@ -16,8 +16,8 @@ const Features = () => {
     },
     {
       icon: UsersThree,
-      title: "Social Lobbies",
-      description: "Create or join lobbies to find players at your skill level for any sport.",
+      title: "Social Groups",
+      description: "Create or join groups to find players at your skill level for any sport.",
     },
     {
       icon: Trophy,
@@ -26,8 +26,8 @@ const Features = () => {
     },
     {
       icon: MagnifyingGlass,
-      title: "Player Matching",
-      description: "Smart algorithm matches you with compatible players based on skill and location.",
+      title: "People Matching",
+      description: "Smart algorithm matches you with compatible people based on skill and location.",
     },
   ];
 
@@ -42,7 +42,7 @@ const Features = () => {
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4">Powerful Features</h2>
           <p className="text-xl text-muted-foreground">
-            Everything you need to connect through sports
+            Everything you need to connect through activity
           </p>
         </motion.div>
 

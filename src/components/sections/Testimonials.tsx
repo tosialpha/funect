@@ -29,36 +29,6 @@ const Testimonials = () => {
       quote: t('testimonials.3.quote'),
       outcome: t('testimonials.3.outcome'),
     },
-    {
-      name: "Veeti Eerola",
-      sport: t('testimonials.4.sport'),
-      quote: t('testimonials.4.quote'),
-      outcome: t('testimonials.4.outcome'),
-    },
-    {
-      name: "Emma Virtanen",
-      sport: t('testimonials.5.sport'),
-      quote: t('testimonials.5.quote'),
-      outcome: t('testimonials.5.outcome'),
-    },
-    {
-      name: "Mikko Laaksonen",
-      sport: t('testimonials.6.sport'),
-      quote: t('testimonials.6.quote'),
-      outcome: t('testimonials.6.outcome'),
-    },
-    {
-      name: "Sofia Andersson",
-      sport: t('testimonials.7.sport'),
-      quote: t('testimonials.7.quote'),
-      outcome: t('testimonials.7.outcome'),
-    },
-    {
-      name: "Lauri Saarinen",
-      sport: t('testimonials.8.sport'),
-      quote: t('testimonials.8.quote'),
-      outcome: t('testimonials.8.outcome'),
-    },
   ];
 
   // Duplicate testimonials for infinite scroll effect
