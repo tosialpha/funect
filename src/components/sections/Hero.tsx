@@ -4,7 +4,6 @@ import { Card } from "../ui/card";
 import { MapPin, Users, Trophy } from "@phosphor-icons/react";
 import { useLanguage } from "../../contexts/LanguageContext";
 import { Suspense, lazy, useState, useEffect } from "react";
-import heroMockupPlaceholder from "../../assets/hero-mockup.jpg";
 
 // Lazy load Spline component
 const LazySpline = lazy(() => import("@splinetool/react-spline"));
@@ -76,49 +75,15 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="w-full h-[750px] relative isolate -mt-44"
           >
-            {/* Placeholder image - shows immediately */}
-            {!splineLoaded && (
-              <div className="absolute inset-0 flex items-center justify-center">
-                <img
-                  src={heroMockupPlaceholder}
-                  alt="App mockup"
-                  className="h-full w-auto object-contain"
-                  loading="eager"
-                />
-              </div>
-            )}
-
-            {/* Spline 3D mockup - loads conditionally */}
             {shouldLoadSpline && (
-              <div className={`absolute inset-0 [&_canvas]:!bg-transparent [&>div]:!bg-transparent pointer-events-none transition-opacity duration-500 ${splineLoaded ? 'opacity-100' : 'opacity-0'}`}>
-                <Suspense fallback={
-                  <div className="w-full h-full flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4"></div>
-                      <p className="text-sm text-foreground/60">Loading 3D mockup...</p>
-                    </div>
-                  </div>
-                }>
+              <div className="absolute inset-0 [&_canvas]:!bg-transparent [&>div]:!bg-transparent pointer-events-none">
+                <Suspense fallback={<div className="w-full h-full" />}>
                   <LazySpline
                     scene="/dynamic_i_phone_mockup.spline"
                     style={{ width: '100%', height: '100%', background: 'transparent', pointerEvents: 'none' }}
                     onLoad={() => setSplineLoaded(true)}
                   />
                 </Suspense>
-              </div>
-            )}
-
-            {/* Manual load button for slow connections */}
-            {!shouldLoadSpline && (
-              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-10">
-                <Button
-                  size="sm"
-                  variant="outline"
-                  onClick={() => setShouldLoadSpline(true)}
-                  className="bg-background/80 backdrop-blur-sm"
-                >
-                  Load 3D Version
-                </Button>
               </div>
             )}
           </motion.div>
