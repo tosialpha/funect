@@ -63,14 +63,12 @@ const Navigation = () => {
     { label: t('nav.howItWorks'), id: "how-it-works" },
     { label: t('nav.forVenues'), id: "pricing" },
     { label: t('nav.about'), to: "/about" },
-    { label: t('nav.articles'), to: "/blog" },
     { label: t('nav.faq'), id: "faq" },
     { label: t('nav.contact'), to: "/contact" },
   ] : [
     { label: t('nav.howItWorks'), hash: "how-it-works" },
     { label: t('nav.forVenues'), hash: "pricing" },
     { label: t('nav.about'), to: "/about" },
-    { label: t('nav.articles'), to: "/blog" },
     { label: t('nav.faq'), hash: "faq" },
     { label: t('nav.contact'), to: "/contact" },
   ];

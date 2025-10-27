@@ -1,7 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import Hero from "@/components/sections/Hero";
-import Testimonials from "@/components/sections/Testimonials";
 import Mission from "@/components/sections/Mission";
 import Pricing from "@/components/sections/Pricing";
 import FAQ from "@/components/sections/FAQ";
@@ -81,7 +80,6 @@ const Index = () => {
       <div className="relative z-10">
         <Navigation />
         <Hero />
-        <Testimonials />
         <Mission />
         <Pricing />
         <FAQ />
