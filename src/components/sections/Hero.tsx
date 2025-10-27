@@ -20,16 +20,13 @@ const Hero = () => {
 
     if (connection) {
       const effectiveType = connection.effectiveType;
-      // Only load Spline on fast connections (4g)
-      if (effectiveType === '4g') {
+      // Load Spline on 3G and above, skip on slow 2G
+      if (effectiveType !== 'slow-2g' && effectiveType !== '2g') {
         setShouldLoadSpline(true);
       }
     } else {
-      // If we can't detect connection, wait a bit and then load
-      const timer = setTimeout(() => {
-        setShouldLoadSpline(true);
-      }, 1000);
-      return () => clearTimeout(timer);
+      // If we can't detect connection, load anyway (most modern browsers/connections)
+      setShouldLoadSpline(true);
     }
   }, []);
 
