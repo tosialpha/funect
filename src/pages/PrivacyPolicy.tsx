@@ -32,7 +32,7 @@ const PrivacyPolicy = () => {
             <section className="overflow-visible">
               <h2 className="text-3xl font-bold mb-4">1. Introduction</h2>
               <p className="text-muted-foreground mb-4 pb-2">
-                Funect ("we," "our," or "us") is currently operated as a sole proprietorship and will be registered as Funect Oy in Finland. We are committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your personal information when you use our mobile application, website, and related services (collectively, the "Service").
+                Funect ("we," "our," or "us") is operated by Funect Oy, a company registered in Finland. We are committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your personal information when you use our mobile application, website, and related services (collectively, the "Service").
               </p>
               <p className="text-muted-foreground mb-4 pb-2">
                 <strong>Early Access Notice:</strong> Funect is currently in early access/beta phase. Data security measures are in place, but as with any early-stage service, you should be mindful of what information you share.
@@ -41,7 +41,7 @@ const PrivacyPolicy = () => {
                 This Privacy Policy should be read in conjunction with our Terms of Service. By using the Service, you consent to the data practices described in this policy.
               </p>
               <p className="text-muted-foreground pb-2">
-                <strong>Data Controller:</strong> As a sole proprietorship (pending Funect Oy registration), the operator of Funect is the data controller responsible for your personal information.
+                <strong>Data Controller:</strong> Funect Oy is the data controller responsible for your personal information.
               </p>
             </section>
 
@@ -423,19 +423,19 @@ const PrivacyPolicy = () => {
 
               <p className="text-muted-foreground mb-2 pb-2"><strong>Organizational Measures:</strong></p>
               <ul className="list-disc list-inside text-muted-foreground space-y-2 ml-4 mb-4">
-                <li>Access limited to authorized personnel only (currently solo developer)</li>
+                <li>Access limited to authorized personnel only</li>
                 <li>Data breach response procedures</li>
                 <li>Regular security policy reviews</li>
                 <li>Secure development practices</li>
               </ul>
 
               <p className="text-muted-foreground mb-2 pb-2"><strong>Early Access Considerations:</strong></p>
-              <p className="text-muted-foreground mb-2 pb-2">As Funect is in early access and operated by a solo developer:</p>
+              <p className="text-muted-foreground mb-2 pb-2">As Funect is in early access:</p>
               <ul className="list-disc list-inside text-muted-foreground space-y-2 ml-4 mb-4">
                 <li>Security measures are appropriate for the current scale but will expand as the platform grows</li>
                 <li>We use established, secure third-party services (Supabase, etc.) rather than custom infrastructure</li>
                 <li>Regular security audits will be implemented as the platform scales</li>
-                <li>We prioritize data security but acknowledge the constraints of early-stage development</li>
+                <li>We prioritize data security and maintain robust security standards</li>
               </ul>
 
               <p className="text-muted-foreground mb-2 pb-2"><strong>Important Notice:</strong></p>
@@ -593,7 +593,8 @@ const PrivacyPolicy = () => {
               </p>
               <p className="text-muted-foreground mb-2 pb-2"><strong>Data Controller:</strong></p>
               <p className="text-muted-foreground mb-4 pb-2">
-                Funect (Sole Proprietorship, pending Funect Oy registration)<br />
+                Funect Oy<br />
+                Finland<br />
                 Email: privacy@funect.com
               </p>
 
@@ -602,10 +603,6 @@ const PrivacyPolicy = () => {
 
               <p className="text-muted-foreground mb-2 pb-2"><strong>Response Time:</strong></p>
               <p className="text-muted-foreground mb-4 pb-2">We aim to respond to all inquiries within 30 days as required by GDPR.</p>
-
-              <p className="text-muted-foreground pb-2 italic">
-                Note: Upon registration as Funect Oy (expected within approximately one month), this Privacy Policy will be updated to reflect the new legal entity. Users will be notified of this administrative change.
-              </p>
             </section>
 
             <section className="overflow-visible">
@@ -613,7 +610,7 @@ const PrivacyPolicy = () => {
 
               <p className="text-muted-foreground mb-2 pb-2"><strong>Controller Details:</strong></p>
               <p className="text-muted-foreground mb-4 pb-2">
-                Funect is currently operated as a sole proprietorship based in Finland. Upon registration (expected within approximately one month), Funect Oy will become the registered data controller.
+                Funect Oy is a company registered in Finland and is the data controller responsible for your personal information.
               </p>
 
               <p className="text-muted-foreground mb-2 pb-2"><strong>Data Protection Contact:</strong></p>

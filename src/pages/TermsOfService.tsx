@@ -32,7 +32,7 @@ const TermsOfService = () => {
             <section className="overflow-visible">
               <h2 className="text-3xl font-bold mb-4">1. Introduction and Acceptance of Terms</h2>
               <p className="text-muted-foreground mb-4 pb-2">
-                Welcome to Funect ("we," "our," or "us"). Funect is currently operated as a sole proprietorship and will be registered as Funect Oy in Finland. These Terms of Service ("Terms") govern your access to and use of the Funect mobile application, website, and related services (collectively, the "Service").
+                Welcome to Funect ("we," "our," or "us"). Funect is operated by Funect Oy, a company registered in Finland. These Terms of Service ("Terms") govern your access to and use of the Funect mobile application, website, and related services (collectively, the "Service").
               </p>
               <p className="text-muted-foreground mb-4 pb-2">
                 <strong>Beta/Early Access Notice:</strong> Funect is currently in early access. The Service may contain bugs, incomplete features, or interruptions. By using the Service during this phase, you acknowledge and accept these limitations.
@@ -364,16 +364,16 @@ const TermsOfService = () => {
                 If you have any questions, concerns, or complaints regarding these Terms, please contact us:
               </p>
               <p className="text-muted-foreground mb-2 pb-2 font-semibold">
-                Funect (Sole Proprietorship, pending Funect Oy registration)
+                Funect Oy
+              </p>
+              <p className="text-muted-foreground mb-4 pb-2">
+                Finland
               </p>
               <ul className="list-none text-muted-foreground space-y-1 ml-0 mb-4">
                 <li>Email: legal@funect.com</li>
                 <li>Support: support@funect.com</li>
                 <li>For data protection inquiries: privacy@funect.com</li>
               </ul>
-              <p className="text-muted-foreground pb-2 italic">
-                Note: Upon registration as Funect Oy, these Terms will be updated to reflect the new legal entity. Users will be notified of this change.
-              </p>
               <p className="text-muted-foreground pb-2 italic mt-6">
                 By using Funect, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service.
               </p>
