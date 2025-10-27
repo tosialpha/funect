@@ -3,31 +3,13 @@ import { Button } from "../ui/button";
 import { Card } from "../ui/card";
 import { MapPin, Users, Trophy } from "@phosphor-icons/react";
 import { useLanguage } from "../../contexts/LanguageContext";
-import { Suspense, lazy, useState, useEffect } from "react";
+import { Suspense, lazy } from "react";
 
 // Lazy load Spline component
 const LazySpline = lazy(() => import("@splinetool/react-spline"));
 
 const Hero = () => {
   const { t } = useLanguage();
-  const [splineLoaded, setSplineLoaded] = useState(false);
-  const [shouldLoadSpline, setShouldLoadSpline] = useState(false);
-
-  useEffect(() => {
-    // Check network connection speed
-    const connection = (navigator as any).connection || (navigator as any).mozConnection || (navigator as any).webkitConnection;
-
-    if (connection) {
-      const effectiveType = connection.effectiveType;
-      // Load Spline on 3G and above, skip on slow 2G
-      if (effectiveType !== 'slow-2g' && effectiveType !== '2g') {
-        setShouldLoadSpline(true);
-      }
-    } else {
-      // If we can't detect connection, load anyway (most modern browsers/connections)
-      setShouldLoadSpline(true);
-    }
-  }, []);
 
   const steps = [
     {
@@ -75,17 +57,14 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="w-full h-[750px] relative isolate -mt-44"
           >
-            {shouldLoadSpline && (
-              <div className="absolute inset-0 [&_canvas]:!bg-transparent [&>div]:!bg-transparent pointer-events-none">
-                <Suspense fallback={<div className="w-full h-full" />}>
-                  <LazySpline
-                    scene="/dynamic_i_phone_mockup.spline"
-                    style={{ width: '100%', height: '100%', background: 'transparent', pointerEvents: 'none' }}
-                    onLoad={() => setSplineLoaded(true)}
-                  />
-                </Suspense>
-              </div>
-            )}
+            <div className="absolute inset-0 [&_canvas]:!bg-transparent [&>div]:!bg-transparent pointer-events-none">
+              <Suspense fallback={<div className="w-full h-full" />}>
+                <LazySpline
+                  scene="/dynamic_i_phone_mockup.spline"
+                  style={{ width: '100%', height: '100%', background: 'transparent', pointerEvents: 'none' }}
+                />
+              </Suspense>
+            </div>
           </motion.div>
 
           {/* Right: How It Works */}
